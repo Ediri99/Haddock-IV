@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "109718645729",
+    "project_id": "doolshe-21133",
+    "storage_bucket": "doolshe-21133.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109718645729:android:643ba7071df5d9ff2040a0",
+        "android_client_info": {
+          "package_name": "com.example.doolshe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109718645729-rc685i50c120kighqo32fs4954itvmd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9tf4HFsm7b7Gs3ss0j_YkprkIhht7pss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109718645729-rc685i50c120kighqo32fs4954itvmd7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
