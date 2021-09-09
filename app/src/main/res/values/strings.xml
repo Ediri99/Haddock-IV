@@ -3,6 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="btnShopOwnerLoginAs">shop owner</string>
+    <string name="btnCustomerLoginAs">customer</string>
+    <string name="loginAs">LOGIN AS</string>
 
     <string-array name="State">
         <item>Maharashtra</item>
