@@ -4,13 +4,16 @@
     package="com.example.doolshe">
 
     <application
-        tools:replace="android:theme"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Doolshe">
+        android:theme="@style/Theme.Doolshe"
+        tools:replace="android:theme">
+        <activity
+            android:name=".MainMenu"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
