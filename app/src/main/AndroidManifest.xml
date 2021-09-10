@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Doolshe"
         tools:replace="android:theme">
         <activity
+            android:name=".ChooseRegistration"
+            android:exported="true" />
+        <activity
             android:name=".ChooseLogin"
             android:exported="true" />
         <activity

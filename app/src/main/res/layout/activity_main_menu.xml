@@ -11,8 +11,6 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:context=".MainMenu">
 
-    /*
-
     <ImageView
         android:id="@+id/backgroundMainMenu"
         android:layout_width="412dp"

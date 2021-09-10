@@ -29,14 +29,31 @@ public class MainMenu extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity();
+                openLoginChoices();
+            }
+        });
+
+        signup = (Button) findViewById(R.id.signUp);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openRegistrationChoices();
             }
         });
     }
-    public void openActivity(){
-        Intent intent = new Intent(MainMenu.this,ChooseLogin.class);
-        startActivity(intent);
+
+
+    public void openLoginChoices(){
+        Intent loginintent = new Intent(MainMenu.this,ChooseLogin.class);
+        startActivity(loginintent);
     }
+
+    public void openRegistrationChoices(){
+        Intent registerintent = new Intent(MainMenu.this,ChooseRegistration.class);
+        startActivity(registerintent);
+    }
+
+
        /* final Animation Zoomin = AnimationUtils.loadAnimation(this,R.anim.zoomin);
         final Animation Zoomout = AnimationUtils.loadAnimation(this,R.anim.zoomout);
 

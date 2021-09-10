@@ -1,11 +1,12 @@
 package com.example.doolshe;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class ChooseLogin extends AppCompatActivity {
+public class ChooseRegistration extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +15,6 @@ public class ChooseLogin extends AppCompatActivity {
         getSupportActionBar().hide(); //hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
-        setContentView(R.layout.activity_choose_login);
+        setContentView(R.layout.activity_choose_registration);
     }
 }

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginchooseback"
-    tools:context=".ChooseLogin">
+    android:background="@drawable/chooseregistrationback"
+    tools:context=".ChooseRegistration">
 
     <ImageView
         android:id="@+id/resisterAsLogo"
@@ -26,40 +26,23 @@
 
     <TextView
         android:id="@+id/tvRegisterAs"
-        android:layout_width="197dp"
-        android:layout_height="54dp"
+        android:layout_width="267dp"
+        android:layout_height="60dp"
         android:layout_marginStart="112dp"
         android:layout_marginLeft="112dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="112dp"
         android:layout_marginRight="112dp"
         android:fontFamily="@font/abhaya_libre_extrabold"
-        android:text="LOGIN AS"
-        android:textColor="#A19D9E"
+        android:text="@string/registerAs"
+        android:textColor="#EFB402"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resisterAsLogo" />
 
     <Button
-        android:id="@+id/btnShopOwnerLoginAs"
-        android:layout_width="281dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginRight="65dp"
-        android:text="@string/btnShopOwnerLoginAs"
-        android:textColor="#000000"
-        app:backgroundTint="#B99BEF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRegisterAs" />
-
-    <Button
-        android:id="@+id/btnCustomerLoginAs"
+        android:id="@+id/btnRegisterAsCustomer"
         android:layout_width="281dp"
         android:layout_height="60dp"
         android:layout_marginStart="65dp"
@@ -67,10 +50,28 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="65dp"
         android:layout_marginRight="65dp"
-        android:text="@string/btnCustomerLoginAs"
+        android:text="@string/btnRegisterAsCustomer"
         android:textColor="#000000"
         app:backgroundTint="#E6847C"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnShopOwnerLoginAs" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegisterAsShopOwner" />
+
+    <Button
+        android:id="@+id/btnRegisterAsShopOwner"
+        android:layout_width="281dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:text="@string/btnRegisterAsShopOwner"
+        android:textColor="#000000"
+        app:backgroundTint="#B99BEF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegisterAs" />
 </androidx.constraintlayout.widget.ConstraintLayout>

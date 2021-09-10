@@ -6,6 +6,9 @@
     <string name="btnShopOwnerLoginAs">shop owner</string>
     <string name="btnCustomerLoginAs">customer</string>
     <string name="loginAs">LOGIN AS</string>
+    <string name="registerAs">REGISTER AS</string>
+    <string name="btnRegisterAsCustomer">customer</string>
+    <string name="btnRegisterAsShopOwner">shop owner</string>
 
     <string-array name="State">
         <item>Maharashtra</item>
