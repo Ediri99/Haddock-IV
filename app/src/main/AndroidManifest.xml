@@ -12,6 +12,18 @@
         android:theme="@style/Theme.Doolshe"
         tools:replace="android:theme">
         <activity
+            android:name=".ShopOwnerRegistration"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerRegistration"
+            android:exported="true" />
+        <activity
+            android:name=".ShopOwnerLogin"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerLogin"
+            android:exported="true" />
+        <activity
             android:name=".ChooseRegistration"
             android:exported="true" />
         <activity
