@@ -25,11 +25,57 @@ public class MainMenu extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
         setContentView(R.layout.activity_main_menu);
 
+        final Animation zoomin = AnimationUtils.loadAnimation(this,R.anim.zoomin);
+        final Animation zoomout = AnimationUtils.loadAnimation(this,R.anim.zoomout);
+
+        bgimage=findViewById(R.id.backgroundMainMenu);
+        bgimage.setAnimation(zoomin);
+        bgimage.setAnimation(zoomout);
+
+        zoomout.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                bgimage.startAnimation(zoomin);
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+        zoomin.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                bgimage.startAnimation(zoomout);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+
+
         signin = (Button) findViewById(R.id.signIn);
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openLoginChoices();
+                Intent loginintent = new Intent(MainMenu.this,ChooseLogin.class);
+                /*openLoginChoices();*/
+                startActivity(loginintent);
+                /*finish();*/
             }
         });
 
@@ -37,13 +83,17 @@ public class MainMenu extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openRegistrationChoices();
+                Intent registerintent = new Intent(MainMenu.this,ChooseRegistration.class);
+                /*openRegistrationChoices();*/
+                /*signup.putExtra("Home","SignUp");*/
+                startActivity(registerintent);
+                /*finish();*/
             }
         });
     }
 
 
-    public void openLoginChoices(){
+    /*public void openLoginChoices(){
         Intent loginintent = new Intent(MainMenu.this,ChooseLogin.class);
         startActivity(loginintent);
     }
@@ -51,50 +101,17 @@ public class MainMenu extends AppCompatActivity {
     public void openRegistrationChoices(){
         Intent registerintent = new Intent(MainMenu.this,ChooseRegistration.class);
         startActivity(registerintent);
+    }*/
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.gc();
+
     }
-
-
-       /* final Animation Zoomin = AnimationUtils.loadAnimation(this,R.anim.zoomin);
-        final Animation Zoomout = AnimationUtils.loadAnimation(this,R.anim.zoomout);
-
-        bgimage=findViewById(R.id.back_2);
-        bgimage.setAnimation(Zoomin);
-        bgimage.setAnimation(Zoomout);
-
-        Zoomout.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                bgimage.startAnimation(Zoomin);
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-
-        Zoomin.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                bgimage.startAnimation(Zoomout);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });*/
+}
+       /* */
         /*signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -115,4 +132,3 @@ public class MainMenu extends AppCompatActivity {
             }
         });*/
 
-}
