@@ -9,6 +9,11 @@
     <string name="registerAs">REGISTER AS</string>
     <string name="btnRegisterAsCustomer">customer</string>
     <string name="btnRegisterAsShopOwner">shop owner</string>
+    <string name="tieShopName">Shop Name</string>
+    <string name="tieAddress">Location</string>
+    <string name="tieOwnerName">Owner Name</string>
+    <string name="tieMobileNumber">Mobile Number</string>
+    <string name="tiePassword">Password</string>
 
     <string-array name="State">
         <item>Maharashtra</item>
