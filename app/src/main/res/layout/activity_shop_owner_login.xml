@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/test"
     tools:context=".ShopOwnerLogin">
+    <!--Shanage moda wada nisa epa wela dn-->
 
     <LinearLayout
         android:layout_width="280dp"
