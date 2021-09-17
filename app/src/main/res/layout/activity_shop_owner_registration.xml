@@ -10,7 +10,7 @@
 
     <ScrollView
         android:layout_width="350dp"
-        android:layout_height="575dp"
+        android:layout_height="625dp"
         android:background="@drawable/formscrollbackground"
         android:orientation="vertical"
         android:padding="15dp"
@@ -31,6 +31,12 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
+                android:layout_marginStart="300px"
+                android:layout_marginLeft="300px"
+                android:layout_marginTop="50px"
+                android:layout_marginEnd="300px"
+                android:layout_marginRight="300px"
+                android:layout_marginBottom="50px"
                 app:srcCompat="@drawable/flag_sri_lanka" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -40,7 +46,7 @@
                 android:layout_marginTop="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tieShopName"
+                    android:id="@+id/tie_cusname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -58,7 +64,7 @@
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/teiAddress"
+                    android:id="@+id/tie_cusmobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
@@ -74,7 +80,7 @@
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tieOwnerName"
+                    android:id="@+id/tie_cuslocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
@@ -90,7 +96,7 @@
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tieMobileNumber"
+                    android:id="@+id/tie_cusMobileNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
@@ -106,7 +112,7 @@
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tiePassword"
+                    android:id="@+id/tiecusPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
@@ -114,6 +120,16 @@
                     android:inputType="textPassword"
                     android:textColor="#FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnSignupAsOwner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_shape"
+                android:text="register"
+                android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
 

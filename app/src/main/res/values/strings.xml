@@ -14,6 +14,9 @@
     <string name="tieOwnerName">Owner Name</string>
     <string name="tieMobileNumber">Mobile Number</string>
     <string name="tiePassword">Password</string>
+    <string name="your_name">Your Name</string>
+    <string name="address">Address</string>
+    <string name="Your_Address">Your_Address</string>
 
     <string-array name="State">
         <item>Maharashtra</item>

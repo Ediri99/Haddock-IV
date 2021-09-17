@@ -9,20 +9,21 @@
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Doolshe/app/src/main/res/drawable/button_shape.xml" value="0.1" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Doolshe/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Doolshe/app/src/main/res/layout/activity_main_menu.xml" value="0.264" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/drawable/background_shape.xml" value="0.176" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/drawable/formscrollbackground.xml" value="0.1" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/drawable/scrollview_shape.xml" value="0.176" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/drawable/background_shape.xml" value="0.21296296296296297" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/font/.xml" value="0.30520833333333336" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/font/fonts.xml" value="0.17395833333333333" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_choose_login.xml" value="0.264" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_choose_registration.xml" value="0.264" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_customer_login.xml" value="0.264" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_customer_registration.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_main.xml" value="0.275" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_main_menu.xml" value="0.264" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_login.xml" value="0.275" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_registration.xml" value="0.2" />
+        <entry key="..\:/Users/MSI/AndroidStudioProjects/Haddock-IV/app/src/main/res/layout/activity_choose_login.xml" value="0.12291666666666666" />
+        <entry key="..\:/Users/MSI/AndroidStudioProjects/Haddock-IV/app/src/main/res/layout/activity_choose_registration.xml" value="0.12291666666666666" />
+        <entry key="..\:/Users/MSI/AndroidStudioProjects/Haddock-IV/app/src/main/res/layout/activity_customer_login.xml" value="0.12291666666666666" />
+        <entry key="..\:/Users/MSI/AndroidStudioProjects/Haddock-IV/app/src/main/res/layout/activity_customer_registration.xml" value="0.152" />
+        <entry key="..\:/Users/MSI/AndroidStudioProjects/Haddock-IV/app/src/main/res/layout/activity_main.xml" value="0.1265625" />
+        <entry key="..\:/Users/MSI/AndroidStudioProjects/Haddock-IV/app/src/main/res/layout/activity_main_menu.xml" value="0.1265625" />
+        <entry key="..\:/Users/MSI/AndroidStudioProjects/Haddock-IV/app/src/main/res/layout/activity_shop_owner_login.xml" value="0.12291666666666666" />
+        <entry key="..\:/Users/MSI/AndroidStudioProjects/Haddock-IV/app/src/main/res/layout/activity_shop_owner_registration.xml" value="0.176" />
       </map>
     </option>
   </component>
