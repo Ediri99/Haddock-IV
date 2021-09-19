@@ -17,6 +17,14 @@
     <string name="your_name">Your Name</string>
     <string name="address">Address</string>
     <string name="Your_Address">Your_Address</string>
+    <string name="txtDashboard" />
+    <string name="textDashboard">Dashboard</string>
+    <string name="btnMyShop">My Shop</string>
+    <string name="btnMyOrders">My Orders</string>
+    <string name="btnMyAccount">My Account</string>
+    <string name="btnSODeleteProfile">Delete Profile</string>
+    <string name="btnSOUpdateProfile">Update Profile</string>
+    <string name="textMyAccSO">My Account</string>
 
     <string-array name="State">
         <item>Maharashtra</item>

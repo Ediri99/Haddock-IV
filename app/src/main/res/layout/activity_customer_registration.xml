@@ -64,7 +64,7 @@
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tie_cusmobile"
+                    android:id="@+id/tie_shoplocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
@@ -80,7 +80,7 @@
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tie_cuslocation"
+                    android:id="@+id/tie_ownername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
@@ -96,7 +96,7 @@
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tiecusPassword"
+                    android:id="@+id/tie_shopPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
