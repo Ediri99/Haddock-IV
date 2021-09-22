@@ -24,12 +24,15 @@
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_login.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_registration.xml" value="0.264" />
         <entry key="app/src/main/res/layout/activity_customer_login.xml" value="0.21001584975886284" />
+        <entry key="app/src/main/res/layout/activity_customer_orders.xml" value="0.18931159420289856" />
         <entry key="app/src/main/res/layout/activity_customer_registration.xml" value="0.2453125" />
         <entry key="app/src/main/res/layout/activity_my_owner_my_orders.xml" value="0.23125" />
         <entry key="app/src/main/res/layout/activity_shop_owner_dashboard.xml" value="0.23867753623188406" />
         <entry key="app/src/main/res/layout/activity_shop_owner_details.xml" value="0.26782659146914567" />
-        <entry key="app/src/main/res/layout/activity_shop_owner_registration.xml" value="0.1833627076806721" />
-        <entry key="app/src/main/res/layout/activity_update_shop_owner_account.xml" value="0.2246376811594203" />
+        <entry key="app/src/main/res/layout/activity_shop_owner_login.xml" value="0.23206652776730252" />
+        <entry key="app/src/main/res/layout/activity_shop_owner_my_orders.xml" value="0.24139492753623187" />
+        <entry key="app/src/main/res/layout/activity_shop_owner_registration.xml" value="0.1674989755075924" />
+        <entry key="app/src/main/res/layout/activity_update_shop_owner_account.xml" value="0.23096572792307157" />
       </map>
     </option>
   </component>

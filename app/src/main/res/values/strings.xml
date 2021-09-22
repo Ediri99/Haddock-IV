@@ -25,6 +25,7 @@
     <string name="btnSODeleteProfile">Delete Profile</string>
     <string name="btnSOUpdateProfile">Update Profile</string>
     <string name="textMyAccSO">My Account</string>
+    <string name="shopNameUpdate">Shop Name</string>
 
     <string-array name="State">
         <item>Maharashtra</item>
