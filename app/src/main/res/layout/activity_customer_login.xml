@@ -32,7 +32,7 @@
             android:layout_marginLeft="82dp"
             android:layout_marginEnd="82dp"
             android:layout_marginRight="82dp"
-            app:layout_constraintBottom_toTopOf="@+id/tvShopOwnerLogin"
+            app:layout_constraintBottom_toTopOf="@+id/tvCustomerLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             app:srcCompat="@drawable/haddocklogo" />
 
         <TextView
-            android:id="@+id/tvShopOwnerLogin"
+            android:id="@+id/tvCustomerLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -50,14 +50,14 @@
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilShopOwnerPhone"
+            android:id="@+id/tilCustomerPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:paddingBottom="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tieShopOwnerPhone"
+                android:id="@+id/tieCustomerPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone Number"
@@ -65,7 +65,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilShopOwnerPassword"
+            android:id="@+id/CustomerPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp"
@@ -73,7 +73,7 @@
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tieShopOwnerPassword"
+                android:id="@+id/tieCustomerPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
@@ -81,7 +81,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/shopOwnerForgotPassword"
+            android:id="@+id/CustomerForgotPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end"
@@ -90,7 +90,7 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btnCShopOwnerLogin"
+            android:id="@+id/btnCustomerLogin"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="21dp"

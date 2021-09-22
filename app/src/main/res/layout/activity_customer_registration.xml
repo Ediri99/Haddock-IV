@@ -11,7 +11,7 @@
     <ScrollView
         android:layout_width="350dp"
         android:layout_height="575dp"
-        android:background="@drawable/formscrollbackground"
+        android:background="@color/OffWhite"
         android:orientation="vertical"
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,29 +58,29 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilAddress"
+                android:id="@+id/tilCustomerAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tie_shoplocation"
+                    android:id="@+id/tie_customerlocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
-                    android:hint="Mobile Number"
+                    android:hint="Your Location"
                     android:inputType="textPostalAddress"
                     android:textColor="#FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilOwnerName"
+                android:id="@+id/tilCustomerPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tie_ownername"
+                    android:id="@+id/tie_CuctomerPhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"
@@ -90,13 +90,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilPassword"
+                android:id="@+id/tilCustomerPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tie_shopPassword"
+                    android:id="@+id/tie_CustomerPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/scrollview_shape"

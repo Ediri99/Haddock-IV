@@ -12,22 +12,28 @@
         android:theme="@style/Theme.Doolshe"
         tools:replace="android:theme">
         <activity
+            android:name=".ShopOwnerProfile"
+            android:exported="true" />
+        <activity
+            android:name=".ShopOwnerDashboard"
+            android:exported="true" />
+        <activity
             android:name=".CustomerOrders"
             android:exported="true" />
         <activity
-            android:name=".UpdateShopOwnerAccount"
+            android:name=".AddReview"
             android:exported="true" />
         <activity
-            android:name=".ShopOwnerDetails"
+            android:name=".Reviews"
+            android:exported="true" />
+        <activity
+            android:name=".ShopViewCustomer"
             android:exported="true" />
         <activity
             android:name=".ShopOwnerMyOrders"
             android:exported="true" />
         <activity
             android:name=".ShopOwnerMyShop"
-            android:exported="true" />
-        <activity
-            android:name=".ShopOwnerDashboard"
             android:exported="true" />
         <activity
             android:name=".ShopOwnerRegistration"
