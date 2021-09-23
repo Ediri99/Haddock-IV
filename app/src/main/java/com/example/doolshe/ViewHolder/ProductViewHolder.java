@@ -5,8 +5,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.codingcafe.ecommerce.Interface.ItemClickListner;
-import com.example.codingcafe.ecommerce.R;
+import com.example.doolshe.Interface.ItemClickListner;
+import com.example.doolshe.R;
 
 import org.w3c.dom.Text;
 
@@ -24,7 +24,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder implements View.O
         imageView = (ImageView) itemView.findViewById(R.id.product_image);
         txtProductName = (TextView) itemView.findViewById(R.id.product_name);
         txtProductDescription = (TextView) itemView.findViewById(R.id.product_description);
-        txtProductPrice = (TextView) itemView.findViewById(R.id.id.product_price);
+        txtProductPrice = (TextView) itemView.findViewById(R.id.product_price);
     }
 
     public void setItemClickListner(ItemClickListner listner)
