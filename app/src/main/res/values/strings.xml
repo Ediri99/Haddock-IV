@@ -36,6 +36,7 @@
     <string name="btnViewReview">view</string>
     <string name="btnDeleteReview">delete</string>
     <string name="etCusPhone">Enter phone number</string>
+    <string name="btnMyReviews">my reviews</string>
 
     <string-array name="State">
         <item>Maharashtra</item>

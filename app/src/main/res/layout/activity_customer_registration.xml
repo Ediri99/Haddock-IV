@@ -29,15 +29,10 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginStart="300px"
-                android:layout_marginLeft="300px"
-                android:layout_marginTop="50px"
-                android:layout_marginEnd="300px"
-                android:layout_marginRight="300px"
-                android:layout_marginBottom="50px"
-                app:srcCompat="@drawable/flag_sri_lanka" />
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/haddockinvert" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilCusName"
@@ -50,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:background="@drawable/scrollview_shape"
+                    android:background="@color/OffWhite"
                     android:hint="@string/your_name"
                     android:inputType="text"
                     android:textColor="#FFFFFF"
@@ -67,7 +62,7 @@
                     android:id="@+id/tie_customerlocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/scrollview_shape"
+                    android:background="@color/OffWhite"
                     android:hint="Your Location"
                     android:inputType="textPostalAddress"
                     android:textColor="#FFFFFF" />
@@ -83,9 +78,9 @@
                     android:id="@+id/tie_CuctomerPhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/scrollview_shape"
-                    android:hint="Your Location"
-                    android:inputType="text"
+                    android:background="@color/OffWhite"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
                     android:textColor="#FFFFFF" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,7 +94,7 @@
                     android:id="@+id/tie_CustomerPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/scrollview_shape"
+                    android:background="@color/OffWhite"
                     android:hint="New Password"
                     android:inputType="textPassword"
                     android:textColor="#FFFFFF" />
@@ -108,11 +103,12 @@
                     android:id="@+id/btnSignupAsCus"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:layout_marginTop="45dp"
+                    android:layout_marginTop="35dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_shape"
                     android:text="register"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    app:backgroundTint="#852E2E" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
     </ScrollView>

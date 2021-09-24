@@ -51,21 +51,23 @@ public class AddReview extends AppCompatActivity {
             reviews.setcName(etCustomerName.getText().toString().trim());
             String customerName = reviews.getcName();
 
-            Integer customerRating = Integer.parseInt(etCustomerRating.getText().toString());
-            reviews.setRating(customerRating);
+            reviews.setRating(etCustomerRating.getText().toString().trim());
+            String customerRating = reviews.getRating();
 
-            reviews.setComment(mactCustomerComment.getText().toString());
+            reviews.setcPhone(etCusPhone.getText().toString().trim());
+            String customerPhoneNumber = reviews.getcPhone();
+
+            reviews.setComment(mactCustomerComment.getText().toString().trim());
             String customerComment = reviews.getComment();
 
-            Integer customerPhoneNumber = Integer.parseInt(etCusPhone.getText().toString());
-            reviews.set
+
 
 
             clearAll();
 
             dbReference.push().getKey();
-            Reviews reviews = new Reviews(customerName,customerRating,customerComment);
-            dbReference.child(customerName).setValue(reviews);
+            Reviews reviews = new Reviews(customerName,customerRating,customerPhoneNumber,customerComment);
+            dbReference.child(String.valueOf(customerPhoneNumber)).setValue(reviews);
             Toast.makeText(AddReview.this, "Feedback Submitted Successfully.", Toast.LENGTH_LONG).show();
         });
 
@@ -81,7 +83,7 @@ public class AddReview extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatabaseReference refref = FirebaseDatabase.getInstance().getReference().child("Reviews").child("Avishka");
-                dbReference.addValueEventListener(new ValueEventListener() {
+                refref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.hasChildren()){
@@ -104,6 +106,7 @@ public class AddReview extends AppCompatActivity {
     public void clearAll(){
         etCustomerName.setText("");
         etCustomerRating.setText("");
+        etCusPhone.setText("");
         mactCustomerComment.setText("");
     }
 

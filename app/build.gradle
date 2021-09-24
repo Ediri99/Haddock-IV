@@ -70,3 +70,6 @@ dependencies {
     //implementation 'com.google.android.play:core-ktx:1.8.1'
     //implementation 'com.google.android.gms.tasks.Task'
 }
+
+apply plugin:'com.google.gms.google-services'
+apply plugin:'com.android.application'

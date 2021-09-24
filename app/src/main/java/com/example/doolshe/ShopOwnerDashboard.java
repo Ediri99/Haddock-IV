@@ -11,7 +11,6 @@ import com.example.doolshe.R;
 
 public class ShopOwnerDashboard extends AppCompatActivity {
 
-
     Button myShop;
     Button myOrders;
     Button myAccount;
@@ -27,7 +26,7 @@ public class ShopOwnerDashboard extends AppCompatActivity {
         myShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, ShopOwnerMyShop.class);
+                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, AddProduct.class);
                 startActivity(shopOwnerLogin);
             }
         });
