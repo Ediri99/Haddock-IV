@@ -1,24 +1,42 @@
 package com.example.doolshe;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class Reviews {
+    private String cName;
+    private int rating;
+    private String comment;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
+    Reviews(){
 
-public class Reviews extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
-        setContentView(R.layout.activity_reviews);
+    }
 
 
+    public Reviews(String cName, int rating, String comment) {
+        this.cName = cName;
+        this.rating = rating;
+        this.comment = comment;
+    }
+
+    public String getcName() {
+        return cName;
+    }
+
+    public void setcName(String cName) {
+        this.cName = cName;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }
