@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shopreg"
+    tools:context=".ShopOwnerLogin">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="550dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="210dp"
+        android:background="@color/OffWhite"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:id="@+id/imageView6"
+            android:layout_width="248dp"
+            android:layout_height="235dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="82dp"
+            android:layout_marginLeft="82dp"
+            android:layout_marginEnd="82dp"
+            android:layout_marginRight="82dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvShopOwnerSignIn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/haddocklogo" />
+
+        <TextView
+            android:id="@+id/tvShopOwnerSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="SHOP OWNER LOGIN"
+            android:textColor="#D3A4A4"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilShopOwnerPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieShopOwnerPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilShopOwnerPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:paddingBottom="5dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieShopOwnerPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/shopOwnerForgotPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Forgot Password?"
+            android:textColor="#CFBDBD"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnShopOwnerSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="21dp"
+            android:background="@color/colorAccent"
+            android:text="Login"
+            android:textColor="#FFFF"
+            android:textSize="18sp"
+            app:backgroundTint="#9C27B0" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
