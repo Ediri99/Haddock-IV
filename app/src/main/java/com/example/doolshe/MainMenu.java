@@ -1,7 +1,5 @@
 package com.example.doolshe;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +9,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainMenu extends AppCompatActivity {
      Button signin, signup;
@@ -25,8 +25,8 @@ public class MainMenu extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
         setContentView(R.layout.activity_main_menu);
 
-        final Animation zoomin = AnimationUtils.loadAnimation(this,R.anim.zoomin);
-        final Animation zoomout = AnimationUtils.loadAnimation(this,R.anim.zoomout);
+        final Animation zoomin = AnimationUtils.loadAnimation(this, R.anim.zoomin);
+        final Animation zoomout = AnimationUtils.loadAnimation(this, R.anim.zoomout);
 
         bgimage=findViewById(R.id.backgroundMainMenu);
         bgimage.setAnimation(zoomin);

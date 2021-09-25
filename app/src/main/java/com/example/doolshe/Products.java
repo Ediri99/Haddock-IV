@@ -1,15 +1,24 @@
 package com.example.doolshe;
 
 public class Products {
-    private String itemNo, itemName, price, details;
+    private String itemNo, itemName, price, quantity, details;
 
     public Products(){}
 
-    public Products(String itemNo, String itemName, String price, String details) {
+    public Products(String itemNo, String itemName, String price, String quantity,String details) {
         this.itemNo = itemNo;
         this.itemName = itemName;
         this.price = price;
+        this.quantity = quantity;
         this.details = details;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
     public String getItemNo() {
@@ -44,3 +53,5 @@ public class Products {
         this.details = details;
     }
 }
+
+

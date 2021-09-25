@@ -36,6 +36,15 @@
     <string name="btnViewReview">view</string>
     <string name="btnDeleteReview">delete</string>
     <string name="etCusPhone">Enter phone number</string>
+    <string name="delete_product">Delete Product</string>
+    <string name="update_product">Update Product</string>
+    <string name="read_product">Read Product</string>
+    <string name="add_product">Add Product</string>
+    <string name="details">Details</string>
+    <string name="cake_price">Cake Price</string>
+    <string name="cake_name">Cake Name</string>
+    <string name="item_no">Item No.</string>
+
 
     <string-array name="State">
         <item>Maharashtra</item>

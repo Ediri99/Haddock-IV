@@ -1,19 +1,20 @@
 package com.example.doolshe;
 
 public class Reviews {
+
     private String cName;
-    private int rating;
+    private String cPhone;
     private String comment;
+    private String rating;
 
-    Reviews(){
-
+    public Reviews() {
     }
 
-
-    public Reviews(String cName, int rating, String comment) {
+    public Reviews(String cName, String cPhone, String comment, String rating) {
         this.cName = cName;
-        this.rating = rating;
+        this.cPhone = cPhone;
         this.comment = comment;
+        this.rating = rating;
     }
 
     public String getcName() {
@@ -24,12 +25,12 @@ public class Reviews {
         this.cName = cName;
     }
 
-    public int getRating() {
-        return rating;
+    public String getcPhone() {
+        return cPhone;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
+    public void setcPhone(String cPhone) {
+        this.cPhone = cPhone;
     }
 
     public String getComment() {
@@ -38,5 +39,13 @@ public class Reviews {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 }

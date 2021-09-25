@@ -6,199 +6,155 @@
     android:layout_height="match_parent"
     tools:context=".AddProduct">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="253dp"
-        tools:layout_editor_absoluteY="716dp" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="227dp"
-        tools:layout_editor_absoluteY="519dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="519dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="418dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="337dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="243dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="216dp"
-        android:layout_height="80dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="94dp"
-        tools:layout_editor_absoluteY="51dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-<ScrollView
-    android:layout_width="350dp"
-    android:layout_height="650dp"
-    android:background="@color/OffWhite"
-    android:orientation="vertical"
-    android:padding="15dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.436"
-    app:layout_goneMarginLeft="50dp"
-    app:layout_goneMarginRight="50dp">
-
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:id="@+id/linearLayout"
+        android:layout_width="350dp"
+        android:layout_height="680dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="170dp"
+        android:background="@color/OffWhite"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginStart="300px"
-            android:layout_marginLeft="300px"
-            android:layout_marginTop="50px"
-            android:layout_marginEnd="300px"
-            android:layout_marginRight="300px"
-            android:layout_marginBottom="50px"
-            app:srcCompat="@drawable/xxxxxxxximage" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilShopName"
-            android:layout_width="match_parent"
+            android:id="@+id/cakeimg"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginRight="100dp"
+            tools:layout_editor_absoluteX="228dp"
+            tools:layout_editor_absoluteY="459dp"
+            tools:srcCompat="@tools:sample/avatars" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tie_shopname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@color/lightgray"
-                android:hint="@string/tieShopName"
-                android:inputType="text"
-                android:textColor="#FFFFFF"
-                android:textColorHint="@color/lightgray" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <EditText
+            android:id="@+id/cakenoET"
+            android:layout_width="358dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Item Number"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="218dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilAddress"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/cakenameET"
+            android:layout_width="358dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Item Name"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <EditText
+            android:id="@+id/cakepriceET"
+            android:layout_width="358dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:baselineAligned="false"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Price"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="288dp" />
+
+        <EditText
+            android:id="@+id/cakequantityET"
+            android:layout_width="358dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:baselineAligned="false"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Quantity"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="288dp" />
+
+        <EditText
+            android:id="@+id/cakedetailsET"
+            android:layout_width="358dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Details"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="363dp" />
+
+        <Button
+            android:id="@+id/btn_cakec"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="11dp">
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="Submit Product"
+            tools:layout_editor_absoluteX="220dp"
+            tools:layout_editor_absoluteY="675dp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tie_shoplocation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/lightgray"
-                android:hint="@string/tieAddress"
-                android:inputType="textPostalAddress"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#F4F4F4" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilOwnerName"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btn_caker"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="11dp">
+            android:layout_gravity="center"
+            android:text="View Product"
+            android:gravity="center_horizontal"
+            tools:layout_editor_absoluteX="240dp"
+            tools:layout_editor_absoluteY="675dp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tie_ownername"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/lightgray"
-                android:hint="@string/tieOwnerName"
-                android:inputType="text"
-                android:textColor="#FFFFFF" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilMobileNumber"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btn_cakeu"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="11dp">
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="Update Product"
+            tools:layout_editor_absoluteX="228dp"
+            tools:layout_editor_absoluteY="675dp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tie_shopMobileNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/lightgray"
-                android:hint="@string/tieMobileNumber"
-                android:inputType="phone"
-                android:textColor="#FFFFFF" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPassword"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btn_caked"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="11dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tie_shopPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/lightgray"
-                android:hint="@string/tiePassword"
-                android:inputType="textPassword"
-                android:textColor="#FFFFFF" />
-
-            <Button
-                android:id="@+id/btnSignupAsOwner"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="45dp"
-                android:layout_weight="1"
-                android:background="@drawable/button_shape"
-                android:text="register"
-                android:textSize="18sp"
-                app:backgroundTint="@color/Blacklogo" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:text="Delete Product"
+            tools:layout_editor_absoluteX="228dp"
+            tools:layout_editor_absoluteY="675dp" />
 
     </LinearLayout>
-</ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
