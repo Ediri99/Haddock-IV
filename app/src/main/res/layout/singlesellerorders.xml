@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/sellerCustomerName_T"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Customer Name : "
+            android:textColor="#000"
+            android:textSize="8dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sellerCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sellerCustomerName_T"
+            android:layout_marginLeft="10dp"
+            android:text="Customer Name : "
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/sellerOrderName_T"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sellerCustomerName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="Order Name : "
+            android:textColor="#000"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sellerOrderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sellerOrderName_T"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="Order Name : "
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/sellerCustomerPhone_T"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/sellerOrderName"
+            android:text="Phone Number : "
+            android:textColor="#000"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sellerCustomerPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sellerCustomerPhone_T"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="Phone Number : "
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sellerDescription_T"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sellerCustomerPhone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="Description : "
+            android:textColor="#000"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sellerDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sellerDescription_T"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="Description : "
+            android:textColor="#000"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

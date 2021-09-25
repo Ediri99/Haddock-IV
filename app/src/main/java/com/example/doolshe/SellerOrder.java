@@ -2,74 +2,91 @@ package com.example.doolshe;
 
 public class SellerOrder {
 
-    private String Name;
-    private int PhoneNumber;
-    private String HomeAddress;
-    private String Description;
-    private String PaymentMethod;
+    private String orderName;
+    private String phoneNumber;
+    private String homeAddress;
+    private String description;
+    private String paymentMethod;
+    private String itemName;
+    private String itemQuantity;
+    private String itemPrice;
 
-    public SellerOrder(){
-
-    }
-
-    public SellerOrder(String name, int phoneNumber, String homeAddress, String description, String paymentMethod) {
-        Name = name;
-        PhoneNumber = phoneNumber;
-        HomeAddress = homeAddress;
-        Description = description;
-        PaymentMethod = paymentMethod;
+    public SellerOrder() {
 
     }
 
-    public String getName() {
-        return Name;
+    public SellerOrder(String orderName, String phoneNumber, String homeAddress, String description, String paymentMethod, String itemName, String itemQuantity, String itemPrice) {
+        this.orderName = orderName;
+        this.phoneNumber = phoneNumber;
+        this.homeAddress = homeAddress;
+        this.description = description;
+        this.paymentMethod = paymentMethod;
+        this.itemName = itemName;
+        this.itemQuantity = itemQuantity;
+        this.itemPrice = itemPrice;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public String getOrderName() {
+        return orderName;
     }
 
-    public int getPhoneNumber() {
-        return PhoneNumber;
+    public void setOrderName(String orderName) {
+        this.orderName = orderName;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
-        PhoneNumber = phoneNumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getHomeAddress() {
-        return HomeAddress;
+        return homeAddress;
     }
 
     public void setHomeAddress(String homeAddress) {
-        HomeAddress = homeAddress;
+        this.homeAddress = homeAddress;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getPaymentMethod() {
-        return PaymentMethod;
+        return paymentMethod;
     }
 
     public void setPaymentMethod(String paymentMethod) {
-        PaymentMethod = paymentMethod;
+        this.paymentMethod = paymentMethod;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public String getItemQuantity() {
+        return itemQuantity;
+    }
+
+    public void setItemQuantity(String itemQuantity) {
+        this.itemQuantity = itemQuantity;
+    }
+
+    public String getItemPrice() {
+        return itemPrice;
+    }
+
+    public void setItemPrice(String itemPrice) {
+        this.itemPrice = itemPrice;
     }
 }
-/*
-clearAll();
-    dbReference.push().getKey();
-    Reviews reviews = new Reviews(customerName,customerRating,customerComment);
-    dbReference.child(customerName).setValue(reviews);
-    Toast.makeText(AddReview.this, "Feedback Submitted Successfully.", Toast.LENGTH_LONG).show();
-});
- */
-
-
-
-
