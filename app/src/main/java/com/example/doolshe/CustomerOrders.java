@@ -84,7 +84,6 @@ public class CustomerOrders extends AppCompatActivity {
         String totalString = Integer.toString(total);
 
         totAmount.setText(totalString);
-
-
     }
 }
+

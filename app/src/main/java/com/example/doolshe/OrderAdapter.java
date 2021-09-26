@@ -41,18 +41,6 @@ public class OrderAdapter extends FirebaseRecyclerAdapter<OrderDetails, OrderAda
         holder.totPrice.setText(model.getPrice());
         holder.totQuantity.setText(model.getQuantity());
 
-
-        /*holder.orderNow.setOnClickListener((view)->{
-
-            Intent order = new Intent(holder.orderNow.getContext(), CustomerOrders.class);
-
-            order.putExtra("itemName", model.getItemName());
-            //order.putExtra("quantity", model.getQuantity());
-            order.putExtra("price", model.getPrice());
-
-            holder.orderNow.getContext().startActivity(order);
-        });*/
-
     }
 
     @NonNull
@@ -65,7 +53,6 @@ public class OrderAdapter extends FirebaseRecyclerAdapter<OrderDetails, OrderAda
     class myViewHolder extends RecyclerView.ViewHolder{
 
         TextView itemName, totQuantity, totPrice, cusName, cusNum;
-
 
         public myViewHolder(@NonNull View itemView){
             super(itemView);

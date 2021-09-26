@@ -47,23 +47,15 @@ public class CakeAdapter extends FirebaseRecyclerAdapter<Products, CakeAdapter.m
                 .error(R.drawable.common_google_signin_btn_icon_dark_normal)
                 .into(holder.img);
 
-
-
         holder.orderNow.setOnClickListener((view)->{
 
             Intent order = new Intent(holder.orderNow.getContext(), CustomerOrders.class);
 
             order.putExtra("itemName", model.getItemName());
-            //order.putExtra("quantity", model.getQuantity());
             order.putExtra("price", model.getPrice());
 
             holder.orderNow.getContext().startActivity(order);
         });
-
-
-
-
-
     }
 
     @NonNull
@@ -75,20 +67,20 @@ public class CakeAdapter extends FirebaseRecyclerAdapter<Products, CakeAdapter.m
 
     class myViewHolder extends RecyclerView.ViewHolder{
 
-            CircleImageView img;
-            TextView itemNo, itemName, price, quantity;
-            Button orderNow;
+        CircleImageView img;
+        TextView itemNo, itemName, price, quantity;
+        Button orderNow;
 
-            public myViewHolder(@NonNull View itemView){
-                super(itemView);
+        public myViewHolder(@NonNull View itemView){
+            super(itemView);
 
-                img = (CircleImageView)itemView.findViewById(R.id.img1);
-                itemNo = (TextView)itemView.findViewById(R.id.itemNotext);
-                itemName = (TextView)itemView.findViewById(R.id.cakenametext);
-                price = (TextView)itemView.findViewById(R.id.cpricetext);
-                quantity = (TextView)itemView.findViewById(R.id.cquantitytext);
-                orderNow = (Button)itemView.findViewById(R.id.btnOrderNow);
+            img = (CircleImageView)itemView.findViewById(R.id.img1);
+            itemNo = (TextView)itemView.findViewById(R.id.itemNotext);
+            itemName = (TextView)itemView.findViewById(R.id.cakenametext);
+            price = (TextView)itemView.findViewById(R.id.cpricetext);
+            quantity = (TextView)itemView.findViewById(R.id.cquantitytext);
+            orderNow = (Button)itemView.findViewById(R.id.btnOrderNow);
 
-            }
+        }
     }
 }

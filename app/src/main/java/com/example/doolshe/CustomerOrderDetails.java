@@ -1,8 +1,10 @@
 package com.example.doolshe;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -145,9 +147,28 @@ public class CustomerOrderDetails extends AppCompatActivity {
         });
 
         btnDelete.setOnClickListener(view ->{
+            AlertDialog.Builder builder = new AlertDialog.Builder(phoneNumber.getContext());
+            builder.setTitle("Are you sure?");
+            builder.setMessage("Deleted data cannot be recovered!");
             orderDetails.setPhoneNumber(phoneNumber.getText().toString().trim());
-            String phNo=orderDetails.getPhoneNumber();
-            deleteOrder(phNo);
+
+            builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    String phNo = orderDetails.getPhoneNumber();
+                    deleteOrder(phNo);
+                }
+                });
+
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Toast.makeText(phoneNumber.getContext(),"Cancelled", Toast.LENGTH_LONG).show();
+                }
+            });
+            builder.show();
+
         });
 
         btnUpdate.setOnClickListener(view ->{
