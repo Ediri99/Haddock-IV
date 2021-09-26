@@ -8,8 +8,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class ProductAdapter extends FirebaseRecyclerAdapter<Products, ProductAdapter.myViewHolder> {
@@ -22,19 +25,24 @@ public class ProductAdapter extends FirebaseRecyclerAdapter<Products, ProductAda
      *
      * @param options
      */
-    public ProductAdapter(@NonNull FirebaseRecyclerOptions<Products> options) {
-        super(options);
-
-    }
+    public ProductAdapter(@NonNull FirebaseRecyclerOptions<Products> options) {super(options);}
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull Products model) {
 
-        holder.itemNo.setText(model.getItemNo());
-        holder.itemName.setText(model.getItemName());
-        holder.price.setText(model.getPrice());
-
         holder.details.setText(model.getDetails());
+        holder.itemName.setText(model.getItemName());
+        holder.itemNo.setText(model.getItemNo());
+        holder.price.setText(model.getPrice());
+        holder.quantity.setText(model.getQuantity());
+
+
+   /*     Glide.with(holder.img.getContext())
+                .load(model.getCurl())
+                .placeholder(R.drawable.common_google_signin_btn_icon_dark)
+                .circleCrop()
+                .error(R.drawable.common_google_signin_btn_icon_dark_normal)
+                .into(holder.img);*/
     }
 
     @NonNull
@@ -46,17 +54,18 @@ public class ProductAdapter extends FirebaseRecyclerAdapter<Products, ProductAda
 
     class myViewHolder extends RecyclerView.ViewHolder{
 
-
-        TextView itemNo, itemName, price, details;
+       // CircleImageView img;
+        TextView details, itemName, itemNo, price, quantity;
 
         public myViewHolder(@NonNull View itemView){
             super(itemView);
-
-            itemNo = (TextView)itemView.findViewById(R.id.productViewNo);
-            itemName = (TextView)itemView.findViewById(R.id.productViewName);
-            price = (TextView)itemView.findViewById(R.id.productViewPrice);
-
+           // img = (CircleImageView)itemView.findViewById(R.id.img1);
             details = (TextView)itemView.findViewById(R.id.productViewDetails);
+            itemName = (TextView)itemView.findViewById(R.id.productViewName);
+            itemNo = (TextView)itemView.findViewById(R.id.productViewNo);
+            price = (TextView)itemView.findViewById(R.id.productViewPrice);
+            quantity = (TextView)itemView.findViewById(R.id.productViewQuantity);
+
         }
     }
 }

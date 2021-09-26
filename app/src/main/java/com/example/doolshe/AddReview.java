@@ -1,8 +1,5 @@
 package com.example.doolshe;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -11,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -41,7 +41,7 @@ public class AddReview extends AppCompatActivity {
         mactCustomerComment = (MultiAutoCompleteTextView) findViewById(R.id.mactCustomerComment);
         btnSubmitReview = (Button) findViewById(R.id.btnSubmitReview);
         btnUpdateReview = (Button) findViewById(R.id.btnUpdateReview);
-        btnViewReview = (Button) findViewById(R.id.btnViewReview);
+       // btnViewReview = (Button) findViewById(R.id.btnViewReview);
         btnDeleteReview = (Button) findViewById(R.id.btnDeleteReview);
 
         reviews = new Reviews();
@@ -51,21 +51,23 @@ public class AddReview extends AppCompatActivity {
             reviews.setcName(etCustomerName.getText().toString().trim());
             String customerName = reviews.getcName();
 
-            Integer customerRating = Integer.parseInt(etCustomerRating.getText().toString());
-            reviews.setRating(customerRating);
+            reviews.setRating(etCustomerRating.getText().toString().trim());
+            String customerRating = reviews.getRating();
 
-            reviews.setComment(mactCustomerComment.getText().toString());
+            reviews.setcPhone(etCusPhone.getText().toString().trim());
+            String customerPhoneNumber = reviews.getcPhone();
+
+            reviews.setComment(mactCustomerComment.getText().toString().trim());
             String customerComment = reviews.getComment();
 
-            Integer customerPhoneNumber = Integer.parseInt(etCusPhone.getText().toString());
-            reviews.set
+
 
 
             clearAll();
 
             dbReference.push().getKey();
-            Reviews reviews = new Reviews(customerName,customerRating,customerComment);
-            dbReference.child(customerName).setValue(reviews);
+            Reviews reviews = new Reviews(customerName,customerRating,customerPhoneNumber,customerComment);
+            dbReference.child(String.valueOf(customerPhoneNumber)).setValue(reviews);
             Toast.makeText(AddReview.this, "Feedback Submitted Successfully.", Toast.LENGTH_LONG).show();
         });
 
@@ -77,11 +79,11 @@ public class AddReview extends AppCompatActivity {
         });
 
 
-        btnViewReview.setOnClickListener(new View.OnClickListener() {
+    /*    btnViewReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DatabaseReference refref = FirebaseDatabase.getInstance().getReference().child("Reviews").child("Avishka");
-                dbReference.addValueEventListener(new ValueEventListener() {
+                refref.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.hasChildren()){
@@ -99,11 +101,12 @@ public class AddReview extends AppCompatActivity {
                     }
                 });
             }
-        });
+        });*/
     }
     public void clearAll(){
         etCustomerName.setText("");
         etCustomerRating.setText("");
+        etCusPhone.setText("");
         mactCustomerComment.setText("");
     }
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/avishcake"
     tools:context=".AddProduct">
 
     <LinearLayout
@@ -48,8 +49,10 @@
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Item Number"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="218dp" />
 
@@ -63,8 +66,10 @@
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Item Name"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="218dp" />
 
@@ -79,8 +84,10 @@
             android:layout_marginRight="5dp"
             android:baselineAligned="false"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Price"
+            android:inputType="textPersonName"
+            android:textColor="#A6A0A0"
+            android:textColorHint="#FFFFFF"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="288dp" />
 
@@ -95,8 +102,10 @@
             android:layout_marginRight="5dp"
             android:baselineAligned="false"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Quantity"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="288dp" />
 
@@ -110,10 +119,12 @@
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Details"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
             tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="363dp" />
+            tools:layout_editor_absoluteY="363dp"
+            android:textColorHint="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_cakec"
@@ -127,22 +138,14 @@
             tools:layout_editor_absoluteY="675dp" />
 
         <Button
-            android:id="@+id/btn_caker"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="View Product"
-            android:gravity="center_horizontal"
-            tools:layout_editor_absoluteX="240dp"
-            tools:layout_editor_absoluteY="675dp" />
-
-        <Button
             android:id="@+id/btn_cakeu"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
+            android:minHeight="48dp"
             android:text="Update Product"
+            tools:ignore="TouchTargetSizeCheck"
             tools:layout_editor_absoluteX="228dp"
             tools:layout_editor_absoluteY="675dp" />
 

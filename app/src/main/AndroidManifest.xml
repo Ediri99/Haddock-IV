@@ -14,6 +14,10 @@
         android:theme="@style/Theme.Doolshe"
         tools:replace="android:theme">
         <activity
+            android:name=".ProductList"
+            android:exported="true" />
+
+        <activity
             android:name=".AddProduct"
             android:exported="true" />
         <activity

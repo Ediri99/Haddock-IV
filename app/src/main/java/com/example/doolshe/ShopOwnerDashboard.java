@@ -1,20 +1,5 @@
 package com.example.doolshe;
-<<<<<<< HEAD
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-public class ShopOwnerDashboard extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shop_owner_dashboard);
-    }
-}
-=======
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,14 +7,14 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.example.doolshe.R;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ShopOwnerDashboard extends AppCompatActivity {
-
 
     Button myShop;
     Button myOrders;
     Button myAccount;
+    Button reviews;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +27,7 @@ public class ShopOwnerDashboard extends AppCompatActivity {
         myShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, ShopOwnerMyShop.class);
+                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, ProductList.class);
                 startActivity(shopOwnerLogin);
             }
         });
@@ -62,7 +47,16 @@ public class ShopOwnerDashboard extends AppCompatActivity {
                 startActivity(shopOwnerLogin);
             }
         });
+
+     /*   reviews = (Button) findViewById(R.id.btnReviews);
+        reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addReview = new Intent(ShopOwnerDashboard.this,AllReviews.class);
+                startActivity(addReview);
+                /*finish();
+            }
+        });*/
     }
 }
 
->>>>>>> origin/main

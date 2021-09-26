@@ -27,8 +27,8 @@ public class ProductList extends AppCompatActivity {
         getSupportActionBar().hide(); //hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
+        setContentView(R.layout.activity_product_list);
 
-        setContentView(R.layout.activity_product_list);;
 
         btnAddProduct = (Button) findViewById(R.id.btnAddProduct);
         btnAddProduct.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +52,6 @@ public class ProductList extends AppCompatActivity {
         recyclerView.setAdapter(productAdapter);
 
     }
-
     @Override
     protected void onStart() {
         super.onStart();
