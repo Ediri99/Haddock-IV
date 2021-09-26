@@ -14,11 +14,10 @@ import android.widget.Button;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AllReviews extends AppCompatActivity {
-
-    RecyclerView recyclerView;
-    MainAdapter mainAdapter;
-
+public class AllReviewCustomer extends AppCompatActivity {
+    RecyclerView recyclerViewCustomer;
+    MainAdapterCustomer mainAdapterCustomer;
+    Button btnAddReviewCustomer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,33 +26,40 @@ public class AllReviews extends AppCompatActivity {
         getSupportActionBar().hide(); //hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
-        setContentView(R.layout.activity_all_reviews);
+        setContentView(R.layout.activity_all_review_customer);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerReview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        btnAddReviewCustomer = (Button)findViewById(R.id.btnAddReviewCustomer);
+        btnAddReviewCustomer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addReviewCustomer = new Intent(AllReviewCustomer.this,AddReview.class);
+                startActivity(addReviewCustomer);
+                /*finish();*/
+            }
+        });
+
+
+        recyclerViewCustomer = (RecyclerView) findViewById(R.id.recyclerReviewCustomer);
+        recyclerViewCustomer.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<Reviews> options =
                 new FirebaseRecyclerOptions.Builder<Reviews>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Reviews"), Reviews.class)
                         .build();
-        mainAdapter = new MainAdapter(options);
-        recyclerView.setAdapter(mainAdapter);
-
-
-
+        mainAdapterCustomer = new MainAdapterCustomer(options);
+        recyclerViewCustomer.setAdapter(mainAdapterCustomer);
 
     }
-
     @Override
     protected void onStart() {
         super.onStart();
-        mainAdapter.startListening();
+        mainAdapterCustomer.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mainAdapter.stopListening();
+        mainAdapterCustomer.stopListening();
     }
 }

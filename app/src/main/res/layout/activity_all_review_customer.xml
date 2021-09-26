@@ -4,10 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AE335D"
-    tools:context=".AllReviews">
+    android:background="#673AB7"
+    tools:context=".AllReviewCustomer">
 
-
+    <Button
+        android:id="@+id/btnAddReviewCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnAddReviewCustomer"
+        android:textColor="#5E5C5C"
+        app:backgroundTint="#FFC107"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,11 +30,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/btnAddReviewCustomer">
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerReview"
+            android:id="@+id/recyclerReviewCustomer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"

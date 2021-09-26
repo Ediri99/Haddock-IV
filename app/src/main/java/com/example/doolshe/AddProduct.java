@@ -48,6 +48,7 @@ public class AddProduct extends AppCompatActivity {
         clearControls();
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

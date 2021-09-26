@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class ShopViewCustomer extends AppCompatActivity {
 
-    Button reviews;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,6 @@ public class ShopViewCustomer extends AppCompatActivity {
         getSupportActionBar().hide(); //hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
         setContentView(R.layout.activity_shop_view_customer);
-        reviews = (Button) findViewById(R.id.btnReviews);
-        reviews.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent addReview = new Intent(ShopViewCustomer.this,AllReviews.class);
-                startActivity(addReview);
-                /*finish();*/
-            }
-        });
+
     }
 }

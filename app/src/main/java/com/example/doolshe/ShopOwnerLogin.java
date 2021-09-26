@@ -35,8 +35,8 @@ public class ShopOwnerLogin extends AppCompatActivity {
             public void onClick(View view) {
                 if(shopOwnerPhoneNumber.getText().toString().equals("0771111111") && shopOwnerPassword.getText().toString().equals("admin")){
 
-                            Intent allReviews = new Intent(ShopOwnerLogin.this,ShopOwnerDashboard.class);
-                            startActivity(allReviews);
+                            Intent dashboard = new Intent(ShopOwnerLogin.this,ShopOwnerDashboard.class);
+                            startActivity(dashboard);
                             /*finish();*/
 
 

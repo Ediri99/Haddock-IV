@@ -51,8 +51,8 @@ public class CustomerLogin extends AppCompatActivity {
                     alertDialog.show();*/
 
 
-                            Intent shopViewCustomer = new Intent(CustomerLogin.this,ShopViewCustomer.class);
-                            startActivity(shopViewCustomer);
+                            Intent cakelist = new Intent(CustomerLogin.this,CakeList.class);
+                            startActivity(cakelist);
                             /*finish();*/
 
 

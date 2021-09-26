@@ -49,12 +49,12 @@ public class ShopOwnerDashboard extends AppCompatActivity {
             }
         });
 
-        reviews = (Button) findViewById(R.id.btnReviews);
+        reviews = (Button) findViewById(R.id.btnMyReveiws);
         reviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addReview = new Intent(ShopOwnerDashboard.this,AllReviews.class);
-                startActivity(addReview);
+                Intent reviews = new Intent(ShopOwnerDashboard.this,AllReviews.class);
+                startActivity(reviews);
                 /*finish();*/
             }
         });

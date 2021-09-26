@@ -32,7 +32,6 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Reviews, MainAdapter.my
     Reviews reviews = new Reviews();
     EditText reviewViewPhoneNumber;
 
-
     /*public void deleteReview(String phoneNumber){
         dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews").child(phoneNumber);
         dbReference.removeValue();
@@ -57,20 +56,6 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Reviews, MainAdapter.my
         holder.cPhone.setText(model.getcPhone());
         holder.comment.setText(model.getComment());
         holder.rating.setText(model.getRating());
-
-        /*MASHA
-        dbReference = getRef(position);
-        final String myKey = dbReference.getKey();you can name the myKey whatever you want.
-
-
-            holder.imageDelete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    dbReference.child(myKey).removeValue();
-                }
-            });
-
-        END */
 
         holder.btnDeleteReview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +87,8 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Reviews, MainAdapter.my
             Intent btnDeleteReview = new Intent(holder.btnDeleteReview.getContext(), AllReviews.class);
             holder.btnDeleteReview.getContext().startActivity(btnDeleteReview);*/
         });
+
+
     }
 
     @NonNull
@@ -109,6 +96,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Reviews, MainAdapter.my
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.singlereview,parent,false);
         return new myViewHolder(view);
+
     }
 
     class myViewHolder extends RecyclerView.ViewHolder{

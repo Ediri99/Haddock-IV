@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
@@ -20,12 +21,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class AddReview extends AppCompatActivity {
+
     EditText etCustomerName,etCustomerRating,etCusPhone;
     MultiAutoCompleteTextView mactCustomerComment;
-    Button btnSubmitReview,btnUpdateReview,btnViewReview,btnDeleteReview;
+    Button btnSubmitReview,btnUpdateReview,btnDeleteReview;
     DatabaseReference dbReference;
     Reviews reviews;
-
     /*long maxid = 0;*/
 
     @Override
@@ -58,8 +59,6 @@ public class AddReview extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Enter valid phone number", Toast.LENGTH_LONG).show();
                 else if (TextUtils.isEmpty(mactCustomerComment.getText().toString()))
                     Toast.makeText(getApplicationContext(),"Enter Comment", Toast.LENGTH_LONG).show();
-
-
                 else {
                     reviews.setcName(etCustomerName.getText().toString().trim());
                     String customerName = reviews.getcName();
@@ -83,60 +82,51 @@ public class AddReview extends AppCompatActivity {
             }
                 catch (NumberFormatException e){
                 Toast.makeText(getApplicationContext(),"Invalid input",Toast.LENGTH_LONG).show();
-
             }
-            });
-
+        });
 
         btnDeleteReview.setOnClickListener(view -> {
-            reviews.setcPhone(etCusPhone.getText().toString().trim());
-            String cusphone = reviews.getcPhone();
-            deleteReview(cusphone);
+            try {
+                if (TextUtils.isEmpty(etCusPhone.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Enter Your Phone Number", Toast.LENGTH_LONG).show();
+                else {
+                    reviews.setcPhone(etCusPhone.getText().toString().trim());
+                    String cusphone = reviews.getcPhone();
+                    deleteReview(cusphone);
+                }
+            }catch (NumberFormatException e){
+                Toast.makeText(getApplicationContext(),"Invalid input",Toast.LENGTH_LONG).show();
+            }
+
         });
 
         btnUpdateReview.setOnClickListener(view -> {
-            reviews.setcPhone(etCusPhone.getText().toString().trim());
-            String phoneNum = reviews.getcPhone();
+            try {
+                if (TextUtils.isEmpty(etCusPhone.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Enter Your Phone Number", Toast.LENGTH_LONG).show();
+                else {
+                    reviews.setcPhone(etCusPhone.getText().toString().trim());
+                    String phoneNum = reviews.getcPhone();
 
-            String nameCus = etCustomerName.getText().toString();
-            reviews.setcName(nameCus);
+                    String nameCus = etCustomerName.getText().toString();
+                    reviews.setcName(nameCus);
 
-            String comment = mactCustomerComment.getText().toString();
-            reviews.setComment(comment);
+                    String comment = mactCustomerComment.getText().toString();
+                    reviews.setComment(comment);
 
-            String rating= etCustomerRating.getText().toString();
-            reviews.setRating(rating);
-               /*marks.setAverage(physics, chemistry, biomaths);
-               Double average = marks.getAverage();*/
-            updateReview(nameCus, phoneNum, comment, rating);
+                    String rating= etCustomerRating.getText().toString();
+                    reviews.setRating(rating);
+                    updateReview(nameCus, phoneNum, comment, rating);
+
+                }
+
+            }catch (NumberFormatException e){
+                Toast.makeText(getApplicationContext(),"Invalid input",Toast.LENGTH_LONG).show();
+            }
 
         });
-
-
-        /*btnViewReview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DatabaseReference refref = FirebaseDatabase.getInstance().getReference().child("Reviews").child("Avishka");
-                refref.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if(snapshot.hasChildren()){
-                            etCustomerName.setText(snapshot.child("cName").getValue().toString());
-                            etCustomerRating.setText(snapshot.child("dbReference").getValue().toString());
-                            mactCustomerComment.setText(snapshot.child("comment").getValue().toString());
-                        }else{
-                            Toast.makeText(AddReview.this,"Review not Found",Toast.LENGTH_LONG).show();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
-                    }
-                });
-            }
-        });*/
     }
+
     public void clearAll(){
         etCustomerName.setText("");
         etCustomerRating.setText("");
