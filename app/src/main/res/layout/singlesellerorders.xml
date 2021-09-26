@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="65dp">>
+
+
+
+            <TextView
+                android:id="@+id/sellerDescription_T"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:text="Description : "
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sellerDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="2dp"
+                android:text="Description : "
+                android:textColor="#000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="43dp">
+
+            <TextView
+                android:id="@+id/sellerCustomerPhone_T"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:text="Phone Number : "
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sellerCustomerPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="2dp"
+                android:text="Phone Number : "
+                android:textColor="#000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="23dp">
+
+            <TextView
+                android:id="@+id/sellerOrderName_T"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:text="Order Name : "
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sellerOrderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:layout_marginTop="2dp"
+                android:text="Order Name : "
+                android:textColor="#000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+
+            >
+
+            <TextView
+                android:id="@+id/sellerCustomerName_T"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Customer Name : "
+                android:textColor="#000"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sellerCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="Customer Name : "
+                android:textColor="#000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/deleteorderallbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="95dp"
+            android:text="Delete"
+            app:backgroundTint="#CC3D32" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

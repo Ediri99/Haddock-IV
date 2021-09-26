@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.doolshe">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,6 +13,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Doolshe"
         tools:replace="android:theme">
+        <activity
+            android:name=".AddProduct"
+            android:exported="true" />
+        <activity
+            android:name=".ShopOwnerProfile"
+            android:exported="true" />
+        <activity
+            android:name=".ShopOwnerDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerOrders"
+            android:exported="true" />
+        <activity
+            android:name=".AddReview"
+            android:exported="true" />
+        <activity
+            android:name=".AllReviews"
+            android:exported="true" />
+        <activity
+            android:name=".ShopViewCustomer"
+            android:exported="true" />
+        <activity
+            android:name=".ShopOwnerMyOrders"
+            android:exported="true" />
+        <activity
+            android:name=".ShopOwnerMyShop"
+            android:exported="true" />
+        <activity
+            android:name=".ShopOwnerRegistration"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerRegistration"
+            android:exported="true" />
+        <activity
+            android:name=".ShopOwnerLogin"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerLogin"
+            android:exported="true" />
         <activity
             android:name=".ChooseRegistration"
             android:exported="true" />
