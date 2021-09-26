@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -41,45 +42,78 @@ public class AddReview extends AppCompatActivity {
         mactCustomerComment = (MultiAutoCompleteTextView) findViewById(R.id.mactCustomerComment);
         btnSubmitReview = (Button) findViewById(R.id.btnSubmitReview);
         btnUpdateReview = (Button) findViewById(R.id.btnUpdateReview);
-        btnViewReview = (Button) findViewById(R.id.btnViewReview);
         btnDeleteReview = (Button) findViewById(R.id.btnDeleteReview);
 
         reviews = new Reviews();
         dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews");
 
         btnSubmitReview.setOnClickListener(view -> {
-            reviews.setcName(etCustomerName.getText().toString().trim());
-            String customerName = reviews.getcName();
 
-            reviews.setRating(etCustomerRating.getText().toString().trim());
-            String customerRating = reviews.getRating();
-
-            reviews.setcPhone(etCusPhone.getText().toString().trim());
-            String customerPhoneNumber = reviews.getcPhone();
-
-            reviews.setComment(mactCustomerComment.getText().toString().trim());
-            String customerComment = reviews.getComment();
-
+            try {
+                if (TextUtils.isEmpty(etCustomerName.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Enter Your Name", Toast.LENGTH_LONG).show();
+                else if (TextUtils.isEmpty(etCustomerRating.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Enter value between 1 to 5", Toast.LENGTH_LONG).show();
+                else if (TextUtils.isEmpty(etCusPhone.getText().toString()))
+                    Toast.makeText(getApplicationContext(), "Enter valid phone number", Toast.LENGTH_LONG).show();
+                else if (TextUtils.isEmpty(mactCustomerComment.getText().toString()))
+                    Toast.makeText(getApplicationContext(),"Enter Comment", Toast.LENGTH_LONG).show();
 
 
+                else {
+                    reviews.setcName(etCustomerName.getText().toString().trim());
+                    String customerName = reviews.getcName();
 
-            clearAll();
+                    reviews.setRating(etCustomerRating.getText().toString().trim());
+                    String customerRating = reviews.getRating();
 
-            dbReference.push().getKey();
-            Reviews reviews = new Reviews(customerName,customerRating,customerPhoneNumber,customerComment);
-            dbReference.child(String.valueOf(customerPhoneNumber)).setValue(reviews);
-            Toast.makeText(AddReview.this, "Feedback Submitted Successfully.", Toast.LENGTH_LONG).show();
-        });
+                    reviews.setcPhone(etCusPhone.getText().toString().trim());
+                    String customerPhoneNumber = reviews.getcPhone();
+
+                    reviews.setComment(mactCustomerComment.getText().toString().trim());
+                    String customerComment = reviews.getComment();
+
+                    clearAll();
+
+                    dbReference.push().getKey();
+                    Reviews reviews = new Reviews(customerName, customerRating, customerPhoneNumber, customerComment);
+                    dbReference.child(String.valueOf(customerPhoneNumber)).setValue(reviews);
+                    Toast.makeText(AddReview.this, "Feedback Submitted Successfully.", Toast.LENGTH_LONG).show();
+                }
+            }
+                catch (NumberFormatException e){
+                Toast.makeText(getApplicationContext(),"Invalid input",Toast.LENGTH_LONG).show();
+
+            }
+            });
 
 
         btnDeleteReview.setOnClickListener(view -> {
-            reviews.setcName(etCustomerName.getText().toString().trim());
-            String customerName = reviews.getcName();
-            deleteReview(customerName);
+            reviews.setcPhone(etCusPhone.getText().toString().trim());
+            String cusphone = reviews.getcPhone();
+            deleteReview(cusphone);
+        });
+
+        btnUpdateReview.setOnClickListener(view -> {
+            reviews.setcPhone(etCusPhone.getText().toString().trim());
+            String phoneNum = reviews.getcPhone();
+
+            String nameCus = etCustomerName.getText().toString();
+            reviews.setcName(nameCus);
+
+            String comment = mactCustomerComment.getText().toString();
+            reviews.setComment(comment);
+
+            String rating= etCustomerRating.getText().toString();
+            reviews.setRating(rating);
+               /*marks.setAverage(physics, chemistry, biomaths);
+               Double average = marks.getAverage();*/
+            updateReview(nameCus, phoneNum, comment, rating);
+
         });
 
 
-        btnViewReview.setOnClickListener(new View.OnClickListener() {
+        /*btnViewReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DatabaseReference refref = FirebaseDatabase.getInstance().getReference().child("Reviews").child("Avishka");
@@ -101,7 +135,7 @@ public class AddReview extends AppCompatActivity {
                     }
                 });
             }
-        });
+        });*/
     }
     public void clearAll(){
         etCustomerName.setText("");
@@ -110,10 +144,18 @@ public class AddReview extends AppCompatActivity {
         mactCustomerComment.setText("");
     }
 
-    public void deleteReview(String customerName){
-        dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews").child(customerName);
+    public void deleteReview(String phoneNumber){
+        dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews").child(phoneNumber);
         dbReference.removeValue();
         Toast.makeText(AddReview.this,"Review deleted successfully",Toast.LENGTH_LONG).show();
+        clearAll();
+    }
+
+    public void updateReview(String cName,String cPhone,String comment,String rating){
+        dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews").child(String.valueOf(cPhone));
+        Reviews reviews = new Reviews(cName, cPhone, comment, rating);
+        dbReference.setValue(reviews);
+        Toast.makeText(AddReview.this, "Review updated successfully", Toast.LENGTH_LONG).show();
         clearAll();
     }
 }

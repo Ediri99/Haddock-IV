@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -33,7 +34,13 @@ public class ShopOwnerLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(shopOwnerPhoneNumber.getText().toString().equals("0771111111") && shopOwnerPassword.getText().toString().equals("admin")){
-                    AlertDialog.Builder builder = new AlertDialog.Builder(
+
+                            Intent allReviews = new Intent(ShopOwnerLogin.this,ShopOwnerDashboard.class);
+                            startActivity(allReviews);
+                            /*finish();*/
+
+
+                    /*AlertDialog.Builder builder = new AlertDialog.Builder(
                             ShopOwnerLogin.this
                     );
                     builder.setIcon(R.drawable.ic_check);
@@ -47,7 +54,7 @@ public class ShopOwnerLogin extends AppCompatActivity {
                         }
                     });
                     AlertDialog alertDialog = builder.create();
-                    alertDialog.show();
+                    alertDialog.show();*/
 
                 }else{
                     Toast.makeText(getApplicationContext(),"Invalid username and Password",Toast.LENGTH_SHORT).show();

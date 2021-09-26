@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
+    android:background="@drawable/orderback"
     tools:context=".ChooseLogin">
 
     <TextView
@@ -119,17 +119,6 @@
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
             android:text="@string/btnUpdateReview"
-            app:backgroundTint="#E15584" />
-
-        <Button
-            android:id="@+id/btnViewReview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:text="@string/btnViewReview"
             app:backgroundTint="#E15584" />
 
         <Button
