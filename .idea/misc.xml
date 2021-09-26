@@ -34,6 +34,7 @@
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_sign_in.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_view_customer.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/send_feedback.xml" value="0.20185185185185187" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2598958333333333" />
         <entry key="app/src/main/res/drawable/background_shape.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/btnblueish.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/btnred.xml" value="0.1" />
@@ -41,29 +42,32 @@
         <entry key="app/src/main/res/drawable/formscrollbackground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_check.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/scrollview_shape.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/scrollview_shape.xml" value="0.12078857421875" />
         <entry key="app/src/main/res/drawable/shopreg.xml" value="0.16927083333333334" />
         <entry key="app/src/main/res/layout/activity_add_product.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_add_reviews.xml" value="0.153125" />
-        <entry key="app/src/main/res/layout/activity_cake_list.xml" value="0.34895781996929853" />
+        <entry key="app/src/main/res/layout/activity_cake_list.xml" value="0.22996515679442509" />
         <entry key="app/src/main/res/layout/activity_choose_login.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/activity_choose_registration.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/activity_confirm_order.xml" value="0.1675925925925926" />
         <entry key="app/src/main/res/layout/activity_customer_login.xml" value="0.21001584975886284" />
-        <entry key="app/src/main/res/layout/activity_customer_order_details.xml" value="0.24375" />
-        <entry key="app/src/main/res/layout/activity_customer_orders.xml" value="0.4966396612542088" />
+        <entry key="app/src/main/res/layout/activity_customer_order_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_customer_orders.xml" value="0.2987550061764941" />
         <entry key="app/src/main/res/layout/activity_customer_registration.xml" value="0.2453125" />
         <entry key="app/src/main/res/layout/activity_my_owner_my_orders.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/activity_orders_list.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/activity_reviews.xml" value="0.5871236855545355" />
         <entry key="app/src/main/res/layout/activity_shop_owner_dashboard.xml" value="0.23867753623188406" />
         <entry key="app/src/main/res/layout/activity_shop_owner_details.xml" value="0.26782659146914567" />
         <entry key="app/src/main/res/layout/activity_shop_owner_login.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/activity_shop_owner_my_shop.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/activity_shop_owner_registration.xml" value="0.1833627076806721" />
-        <entry key="app/src/main/res/layout/activity_shop_view_customer.xml" value="0.25281845915267614" />
+        <entry key="app/src/main/res/layout/activity_shop_view_customer.xml" value="0.22695634666748313" />
         <entry key="app/src/main/res/layout/activity_update_shop_owner_account.xml" value="0.2246376811594203" />
         <entry key="app/src/main/res/layout/main_item.xml" value="0.2525324787821136" />
+        <entry key="app/src/main/res/layout/order_item.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/send_feedback.xml" value="0.153125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2598958333333333" />
       </map>
     </option>
   </component>

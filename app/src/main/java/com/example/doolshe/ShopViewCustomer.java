@@ -1,13 +1,27 @@
 package com.example.doolshe;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+
+
+
+
+
 public class ShopViewCustomer extends AppCompatActivity {
-    Button reviews, addOrder;
+
+
+    Button reviews, shopView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,25 +29,33 @@ public class ShopViewCustomer extends AppCompatActivity {
         getSupportActionBar().hide(); //hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
         setContentView(R.layout.activity_shop_view_customer);
+
         reviews = (Button) findViewById(R.id.btnReviews);
         reviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent addReview = new Intent(ShopViewCustomer.this,AddReview.class);
-                //startActivity(addReview);
+
+                Intent addReview = new Intent(ShopViewCustomer.this,CustomerOrderDetails.class);
+                startActivity(addReview);
                 /*finish();*/
             }
         });
 
 
-        addOrder = (Button) findViewById(R.id.btnAddOrderCus);
-        addOrder.setOnClickListener(new View.OnClickListener() {
+        shopView = (Button)findViewById(R.id.btnShopView);
+
+        shopView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addOrderCus = new Intent(ShopViewCustomer.this,ConfirmOrder.class);
-                startActivity(addOrderCus);
+
+                Intent shopV = new Intent(ShopViewCustomer.this,CakeList.class);
+                startActivity(shopV);
                 /*finish();*/
             }
         });
+
+
+
+
     }
 }

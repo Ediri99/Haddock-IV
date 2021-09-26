@@ -40,7 +40,7 @@ public class ShopOwnerDashboard extends AppCompatActivity {
         myOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, ShopOwnerMyOrders.class);
+                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, OrdersList.class);
                 startActivity(shopOwnerLogin);
             }
         });

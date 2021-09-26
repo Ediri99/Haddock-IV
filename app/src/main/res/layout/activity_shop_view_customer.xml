@@ -7,6 +7,7 @@
     android:background="@drawable/registerback"
     tools:context=".ShopOwnerRegistration">
 
+
     <Button
         android:id="@+id/btnReviews"
         android:layout_width="wrap_content"
@@ -14,20 +15,22 @@
         android:text="Reviews"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
 
     <Button
-        android:id="@+id/btnAddOrderCus"
+        android:id="@+id/btnShopView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Order"
+        android:text="Products"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
+        app:layout_constraintVertical_bias="0.636" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

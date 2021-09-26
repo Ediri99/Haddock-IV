@@ -6,7 +6,7 @@ public class OrderDetails {
     private String quantity;
     private String price;
     private String cname;
-    private Integer phoneNumber;
+    private String phoneNumber;
     private String address;
     private String date;
     private String payment;
@@ -14,7 +14,7 @@ public class OrderDetails {
 
     public OrderDetails(){}
 
-    public OrderDetails(String itemName, String quantity, String price, String cname, Integer phoneNumber, String address, String date, String payment, String message) {
+    public OrderDetails(String itemName, String quantity, String price, String cname, String phoneNumber, String address, String date, String payment, String message) {
         this.itemName = itemName;
         this.quantity = quantity;
         this.price = price;
@@ -59,11 +59,11 @@ public class OrderDetails {
         this.cname = cname;
     }
 
-    public Integer getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(Integer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

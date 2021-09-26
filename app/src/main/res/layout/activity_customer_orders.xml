@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/registerback"
+    android:background="@drawable/bg10"
     tools:context=".ShopOwnerRegistration">
 
 
     <ScrollView
         android:layout_width="350dp"
-        android:layout_height="650dp"
+        android:layout_height="wrap_content"
         android:background="@color/OffWhite"
         android:orientation="vertical"
         android:padding="15dp"
@@ -40,7 +40,7 @@
                 android:gravity="center_horizontal"
                 android:text="Your Order"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="#010004"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
@@ -53,7 +53,8 @@
                 android:layout_marginTop="1dp"
                 android:layout_marginRight="20dp"
                 android:hint="Item Name"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textColorHint="#7E7A7A" />
 
             <EditText
                 android:id="@+id/etPriceInput"
@@ -64,7 +65,8 @@
                 android:layout_marginTop="1dp"
                 android:layout_marginRight="20dp"
                 android:hint="Price"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textColorHint="#7E7A7A" />
 
             <EditText
                 android:id="@+id/etQuantityInput"
@@ -75,7 +77,8 @@
                 android:layout_marginTop="1dp"
                 android:layout_marginRight="20dp"
                 android:hint="Quantity(kg)"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textColorHint="#7E7A7A" />
 
             <EditText
                 android:id="@+id/etTotalAmount"
@@ -87,7 +90,8 @@
                 android:layout_marginRight="20dp"
                 android:hint="Total Amount"
                 android:inputType="phone"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                android:textColorHint="#7E7A7A" />
 
             <Button
                 android:id="@+id/btnCalTot"
@@ -98,7 +102,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/blueish"
                 android:text="Calculate Total"
-                app:backgroundTint="#193143" />
+                app:backgroundTint="#570722" />
 
             <Button
                 android:id="@+id/btnNext"
@@ -109,7 +113,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@color/blueish"
                 android:text="Next"
-                app:backgroundTint="#193143" />
+                app:backgroundTint="#570722" />
 
 
         </LinearLayout>
