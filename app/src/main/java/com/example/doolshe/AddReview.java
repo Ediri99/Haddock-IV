@@ -44,6 +44,7 @@ public class AddReview extends AppCompatActivity {
         btnSubmitReview = (Button) findViewById(R.id.btnSubmitReview);
         btnUpdateReview = (Button) findViewById(R.id.btnUpdateReview);
         btnDeleteReview = (Button) findViewById(R.id.btnDeleteReview);
+        LoadingDialog loadingDialog = new LoadingDialog(AddReview.this);
 
         reviews = new Reviews();
         dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews");
@@ -77,7 +78,20 @@ public class AddReview extends AppCompatActivity {
                     dbReference.push().getKey();
                     Reviews reviews = new Reviews(customerName, customerRating, customerPhoneNumber, customerComment);
                     dbReference.child(String.valueOf(customerPhoneNumber)).setValue(reviews);
-                    Toast.makeText(AddReview.this, "Feedback Submitted Successfully.", Toast.LENGTH_LONG).show();
+
+                    //loading animation
+                    loadingDialog.startLoadingDialog();
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            loadingDialog.dismissDialog();
+                            Toast.makeText(AddReview.this, "Feedback Submitted Successfully.", Toast.LENGTH_LONG).show();
+
+                        }
+                    },3000);
+                    //end loading animation
+
                 }
             }
                 catch (NumberFormatException e){
