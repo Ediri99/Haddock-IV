@@ -28,18 +28,3 @@ class LoadingDialog {
 }
 
 
- /*AlertDialog.Builder builder = new AlertDialog.Builder(
-                            ShopOwnerLogin.this
-                    );
-                    builder.setIcon(R.drawable.ic_check);
-                    builder.setTitle("Login Successful");
-                    builder.setMessage("WELCOME!");
-
-                    builder.setNegativeButton("YES", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int i) {
-                            dialog.cancel();
-                        }
-                    });
-                    AlertDialog alertDialog = builder.create();
-                    alertDialog.show();*/

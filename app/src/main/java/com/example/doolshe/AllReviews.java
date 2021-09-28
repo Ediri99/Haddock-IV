@@ -1,5 +1,6 @@
 package com.example.doolshe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,14 +11,24 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class AllReviews extends AppCompatActivity {
 
     RecyclerView recyclerView;
     MainAdapter mainAdapter;
+    Button btnShopReview;
+    private int countReviews;
+    private DatabaseReference totRevCountRef;
+    TextView ratecount;
+
 
 
     @Override
@@ -29,8 +40,10 @@ public class AllReviews extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
         setContentView(R.layout.activity_all_reviews);
 
+        totRevCountRef = FirebaseDatabase.getInstance().getReference().child("Reviews");
         recyclerView = (RecyclerView) findViewById(R.id.recyclerReview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        ratecount = (TextView)findViewById(R.id.numRating);
 
 
         FirebaseRecyclerOptions<Reviews> options =
@@ -40,7 +53,25 @@ public class AllReviews extends AppCompatActivity {
         mainAdapter = new MainAdapter(options);
         recyclerView.setAdapter(mainAdapter);
 
+        totRevCountRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                if(snapshot.exists()){
+                    countReviews = (int) snapshot.getChildrenCount();
+                    ratecount.setText(Integer.toString(countReviews));
+                }
+                else{
+                    ratecount.setText("0 reviews");
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 
     }

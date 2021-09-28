@@ -19,18 +19,25 @@
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout-v21/activity_add_reviews.xml" value="0.27395833333333336" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_add_product.xml" value="0.2609375" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_add_reviews.xml" value="0.264" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_all_review_customer.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_all_review_customer.xml" value="0.2" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_all_reviews.xml" value="0.264" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_cake_list.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_all_sellers_orders.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_cake_list.xml" value="0.2" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_choose_login.xml" value="0.264" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_choose_registration.xml" value="0.264" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_customer_login.xml" value="0.264" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_customer_order_details.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_customer_orders.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_customer_registration.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_feedback_form.xml" value="0.264" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_main.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_main_menu.xml" value="0.264" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_orders_list.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_product_list.xml" value="0.2609375" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_rating_count.xml" value="0.264" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_reviews.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_seller_order_management.xml" value="0.2609375" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_dashboard.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_login.xml" value="0.264" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_my_orders.xml" value="0.275" />
@@ -39,11 +46,14 @@
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_registration.xml" value="0.2" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_owner_sign_in.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/activity_shop_view_customer.xml" value="0.275" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/customer_dialog.xml" value="0.2" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/customer_dialog.xml" value="0.264" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/main_item.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/order_item.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/product_item.xml" value="0.275" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/send_feedback.xml" value="0.20185185185185187" />
-        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/singlereview.xml" value="0.6" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/singlereview.xml" value="0.4" />
         <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/singlereviewcustomer.xml" value="0.275" />
+        <entry key="..\:/SLIIT/YEAR_02/Y2S2/MAD/AS/Haddock-IV/app/src/main/res/layout/singlesellerorders.xml" value="0.275" />
         <entry key="app/src/main/res/layout/activity_customer_login.xml" value="0.21001584975886284" />
         <entry key="app/src/main/res/layout/activity_customer_registration.xml" value="0.2453125" />
         <entry key="app/src/main/res/layout/activity_my_owner_my_orders.xml" value="0.23125" />
@@ -54,7 +64,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

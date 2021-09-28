@@ -47,31 +47,17 @@
         android:layout_height="60dp"
         android:layout_marginStart="65dp"
         android:layout_marginLeft="65dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="140dp"
         android:layout_marginEnd="65dp"
         android:layout_marginRight="65dp"
+        android:layout_marginBottom="152dp"
         android:text="@string/btnRegisterAsCustomer"
         android:textColor="#000000"
         app:backgroundTint="#E6847C"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegisterAsShopOwner" />
-
-    <Button
-        android:id="@+id/btnRegisterAsShopOwner"
-        android:layout_width="281dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginRight="65dp"
-        android:text="@string/btnRegisterAsShopOwner"
-        android:textColor="#000000"
-        app:backgroundTint="#B99BEF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRegisterAs" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,7 +51,7 @@ public class AddReview extends AppCompatActivity {
 
         btnSubmitReview.setOnClickListener(view -> {
 
-            try {
+
                 if (TextUtils.isEmpty(etCustomerName.getText().toString()))
                     Toast.makeText(getApplicationContext(), "Enter Your Name", Toast.LENGTH_LONG).show();
                 else if (TextUtils.isEmpty(etCustomerRating.getText().toString()))
@@ -63,6 +63,7 @@ public class AddReview extends AppCompatActivity {
                 else {
                     reviews.setcName(etCustomerName.getText().toString().trim());
                     String customerName = reviews.getcName();
+
 
                     reviews.setRating(etCustomerRating.getText().toString().trim());
                     String customerRating = reviews.getRating();
@@ -93,10 +94,6 @@ public class AddReview extends AppCompatActivity {
                     //end loading animation
 
                 }
-            }
-                catch (NumberFormatException e){
-                Toast.makeText(getApplicationContext(),"Invalid input",Toast.LENGTH_LONG).show();
-            }
         });
 
         btnDeleteReview.setOnClickListener(view -> {
@@ -107,6 +104,20 @@ public class AddReview extends AppCompatActivity {
                     reviews.setcPhone(etCusPhone.getText().toString().trim());
                     String cusphone = reviews.getcPhone();
                     deleteReview(cusphone);
+
+                    //loading animation
+                    loadingDialog.startLoadingDialog();
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            loadingDialog.dismissDialog();
+                            Toast.makeText(AddReview.this, "Feedback Deleted Successfully.", Toast.LENGTH_LONG).show();
+
+                        }
+                    },3000);
+                    //end loading animation
+
                 }
             }catch (NumberFormatException e){
                 Toast.makeText(getApplicationContext(),"Invalid input",Toast.LENGTH_LONG).show();
@@ -132,6 +143,20 @@ public class AddReview extends AppCompatActivity {
                     reviews.setRating(rating);
                     updateReview(nameCus, phoneNum, comment, rating);
 
+                    //loading animation
+                    loadingDialog.startLoadingDialog();
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            loadingDialog.dismissDialog();
+                            Toast.makeText(AddReview.this, "Feedback Updated Successfully.", Toast.LENGTH_SHORT).show();
+
+                        }
+                    },3000);
+                    //end loading animation
+
+
                 }
 
             }catch (NumberFormatException e){
@@ -151,7 +176,6 @@ public class AddReview extends AppCompatActivity {
     public void deleteReview(String phoneNumber){
         dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews").child(phoneNumber);
         dbReference.removeValue();
-        Toast.makeText(AddReview.this,"Review deleted successfully",Toast.LENGTH_LONG).show();
         clearAll();
     }
 
@@ -159,9 +183,8 @@ public class AddReview extends AppCompatActivity {
         dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews").child(String.valueOf(cPhone));
         Reviews reviews = new Reviews(cName, cPhone, comment, rating);
         dbReference.setValue(reviews);
-        Toast.makeText(AddReview.this, "Review updated successfully", Toast.LENGTH_LONG).show();
         clearAll();
     }
+
+
 }
-
-

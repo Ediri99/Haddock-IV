@@ -3,6 +3,7 @@ package com.example.doolshe;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Reviews, MainAdapter.my
     //private DatabaseReference mDatabase;
     Reviews reviews = new Reviews();
     EditText reviewViewPhoneNumber;
+
 
     /*public void deleteReview(String phoneNumber){
         dbReference = FirebaseDatabase.getInstance().getReference().child("Reviews").child(phoneNumber);
@@ -69,6 +71,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Reviews, MainAdapter.my
                     public void onClick(DialogInterface dialogInterface, int i) {
                         FirebaseDatabase.getInstance().getReference().child("Reviews").child(getRef(position).getKey()).removeValue();
                     }
+
                 });
 
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -78,6 +81,9 @@ public class MainAdapter extends FirebaseRecyclerAdapter<Reviews, MainAdapter.my
                     }
                 });
                 builder.show();
+
+
+
             }
 
            /* model.setcPhone(reviewViewPhoneNumber.getText().toString().trim());

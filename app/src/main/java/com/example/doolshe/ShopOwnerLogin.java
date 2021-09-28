@@ -33,7 +33,7 @@ public class ShopOwnerLogin extends AppCompatActivity {
         shopOwnerLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(shopOwnerPhoneNumber.getText().toString().equals("0771111111") && shopOwnerPassword.getText().toString().equals("admin")){
+                if(shopOwnerPhoneNumber.getText().toString().equals("0777665545") && shopOwnerPassword.getText().toString().equals("admin")){
 
                             Intent dashboard = new Intent(ShopOwnerLogin.this,ShopOwnerDashboard.class);
                             startActivity(dashboard);

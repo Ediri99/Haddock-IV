@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#673AB7"
-    tools:context=".AllReviewCustomer">
+    android:background="#85746F"
+    tools:context=".AllSellersOrders">
 
     <Button
-        android:id="@+id/btnAddReviewCustomer"
+        android:id="@+id/OrderAddBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnAddReviewCustomer"
-        android:textColor="#5E5C5C"
-        app:backgroundTint="#FFC107"
+        android:text="Add order"
+        android:textColor="#656464"
+        app:backgroundTint="#E8C353"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.943"
@@ -22,20 +22,19 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_width="411dp"
+        android:layout_height="634dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/scrollview_shape"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddReviewCustomer">
+        app:layout_constraintTop_toBottomOf="@+id/OrderAddBtn">
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerReviewCustomer"
+            android:id="@+id/recyclerReview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
@@ -43,22 +42,5 @@
             android:layout_marginRight="15dp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="111dp"
-        android:layout_marginRight="111dp"
-        android:text="REVIEWS"
-        android:textSize="30dp"
-        android:fontFamily="@font/aclonica"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toStartOf="@+id/btnAddReviewCustomer"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

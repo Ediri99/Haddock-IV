@@ -38,6 +38,9 @@
     <string name="etCusPhone">Enter phone number</string>
     <string name="btnMyReviews">my reviews</string>
     <string name="btnAddReviewCustomer">add review</string>
+    <string name="numRating">Count</string>
+    <string name="avgRating">Average Rating</string>
+    <string name="numOfRates">Number of rates</string>
 
     <string-array name="State">
         <item>Maharashtra</item>

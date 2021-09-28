@@ -45,14 +45,14 @@
         app:layout_constraintVertical_bias="0.48" />
 
     <Button
-        android:id="@+id/btnMyAccount"
+        android:id="@+id/btnCustomerOrders"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:foregroundGravity="center"
         android:gravity="center"
-        android:text="@string/btnMyAccount"
+        android:text="customer orders"
         android:textColor="#706F6F"
-        android:textSize="17sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:backgroundTint="@color/lightgray"
         app:layout_constraintBottom_toBottomOf="parent"

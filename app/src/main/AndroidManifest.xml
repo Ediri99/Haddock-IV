@@ -14,6 +14,18 @@
         android:theme="@style/Theme.Doolshe"
         tools:replace="android:theme">
         <activity
+            android:name=".ProductList"
+            android:exported="true" />
+        <activity
+            android:name=".SellerOrderManagement"
+            android:exported="true" />
+        <activity
+            android:name=".OrdersList"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerOrderDetails"
+            android:exported="true" />
+        <activity
             android:name=".AllReviewCustomer"
             android:exported="true" />
         <activity

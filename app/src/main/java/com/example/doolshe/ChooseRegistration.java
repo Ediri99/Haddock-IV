@@ -33,15 +33,7 @@ public class ChooseRegistration extends AppCompatActivity {
             }
         });
 
-        registerAsShopOwner = (Button) findViewById(R.id.btnRegisterAsShopOwner);
-        registerAsShopOwner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent shopOwnerLogin = new Intent(ChooseRegistration.this,ShopOwnerRegistration.class);
-                startActivity(shopOwnerLogin);
-                /*finish();*/
-            }
-        });
+
 
     }
 }

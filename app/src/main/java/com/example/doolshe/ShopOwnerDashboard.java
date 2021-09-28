@@ -13,7 +13,7 @@ public class ShopOwnerDashboard extends AppCompatActivity {
 
     Button myShop;
     Button myOrders;
-    Button myAccount;
+    Button customerOrders;
     Button reviews;
 
     @Override
@@ -28,7 +28,7 @@ public class ShopOwnerDashboard extends AppCompatActivity {
         myShop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, AddProduct.class);
+                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, ProductList.class);
                 startActivity(shopOwnerLogin);
             }
         });
@@ -36,15 +36,15 @@ public class ShopOwnerDashboard extends AppCompatActivity {
         myOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, ShopOwnerMyOrders.class);
+                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, AllSellersOrders.class);
                 startActivity(shopOwnerLogin);
             }
         });
-        myAccount= (Button) findViewById(R.id.btnMyAccount);
-        myAccount.setOnClickListener(new View.OnClickListener() {
+        customerOrders= (Button) findViewById(R.id.btnCustomerOrders);
+        customerOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, ShopOwnerProfile.class);
+                Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, OrdersList.class);
                 startActivity(shopOwnerLogin);
             }
         });

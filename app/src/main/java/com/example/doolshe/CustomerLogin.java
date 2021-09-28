@@ -33,7 +33,7 @@ public class CustomerLogin extends AppCompatActivity {
         customerLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(customerPhoneNumber.getText().toString().equals("0772222222") && customerPassword.getText().toString().equals("customer")){
+                if(customerPhoneNumber.getText().toString().equals("0777665544") && customerPassword.getText().toString().equals("customer")){
                     /*AlertDialog.Builder builder = new AlertDialog.Builder(
                             CustomerLogin.this
                     );
