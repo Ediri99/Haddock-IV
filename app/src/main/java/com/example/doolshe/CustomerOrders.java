@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -18,7 +19,8 @@ public class CustomerOrders extends AppCompatActivity {
 
 
     Button calTotal, next;
-    EditText itemName, price, quantity, totAmount;
+    TextView itemName, price, totAmount;
+    EditText quantity;
 
 
 
@@ -33,10 +35,10 @@ public class CustomerOrders extends AppCompatActivity {
 
         calTotal = (Button) findViewById(R.id.btnCalTot);
         next = (Button) findViewById(R.id.btnNext);
-        itemName = (EditText) findViewById(R.id.etItemNameInput);
-        price = (EditText) findViewById(R.id.etPriceInput);
+        itemName = (TextView) findViewById(R.id.etItemNameInput);
+        price = (TextView) findViewById(R.id.etPriceInput);
         quantity = (EditText) findViewById(R.id.etQuantityInput);
-        totAmount = (EditText) findViewById(R.id.etTotalAmount);
+        totAmount = (TextView) findViewById(R.id.etTotalAmount);
 
         String oitemName = getIntent().getStringExtra("itemName");
         String oprice = getIntent().getStringExtra("price");

@@ -1,70 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFAF1D"
+    android:background="@drawable/bgpic2"
     tools:context="ShopOwnerDashboard">
 
 
-    <Button
-        android:id="@+id/btnMyShop"
-        android:layout_width="213dp"
-        android:layout_height="67dp"
-        android:background="#8A3B3B"
-        android:text="@string/btnMyShop"
-        android:textSize="20sp"
-        app:backgroundTint="#632121"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
-
-    <Button
-        android:id="@+id/btnMyAccount"
-        android:layout_width="216dp"
-        android:layout_height="76dp"
-        android:text="@string/btnMyAccount"
-        android:textSize="20sp"
-        app:backgroundTint="#632121"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.723" />
-
     <TextView
         android:id="@+id/textDashboard"
-        android:layout_width="211dp"
-        android:layout_height="61dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
         android:text="@string/textDashboard"
+        android:textColor="#000000"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMyShop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.792" />
+
+    <Button
+        android:id="@+id/btnMyShop"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="@string/btnMyShop"
+        android:textColor="#706F6F"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/lightgray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <Button
+        android:id="@+id/btnCustomerorders"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Customer Orders"
+        android:textColor="#706F6F"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/lightgray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.627" />
 
     <Button
         android:id="@+id/btnMyOrders"
-        android:layout_width="221dp"
-        android:layout_height="74dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
         android:text="@string/btnMyOrders"
-        android:textSize="20sp"
-        app:backgroundTint="#632121"
+        android:textColor="#706F6F"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/lightgray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528" />
+        app:layout_constraintVertical_bias="0.553" />
 
+    <Button
+        android:id="@+id/btnMyReveiws"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="Reviews"
+        android:textColor="#706F6F"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/lightgray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 

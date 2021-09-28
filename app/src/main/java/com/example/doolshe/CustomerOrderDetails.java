@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -45,15 +46,15 @@ public class CustomerOrderDetails extends AppCompatActivity {
         dbref = FirebaseDatabase.getInstance().getReference().child("OrderDetails").child(String.valueOf(phNo));
         dbref.removeValue();
         Toast.makeText(CustomerOrderDetails.this, "Order deleted successfully", Toast.LENGTH_LONG).show();
-        clearControls();
+        //clearControls();
     }
 
     public void updateOrder(String iname, String iqty, String iprice, String cusname, String phNo, String add, String ddate, String pay, String msg){
         dbref = FirebaseDatabase.getInstance().getReference().child("OrderDetails").child(String.valueOf(phNo));
         OrderDetails orderDetails = new OrderDetails(iname, iqty, iprice, cusname, phNo, add, ddate, pay, msg);
         dbref.setValue(orderDetails);
-        Toast.makeText(CustomerOrderDetails.this, "Order updated successfully", Toast.LENGTH_LONG).show();
-        clearControls();
+        //Toast.makeText(CustomerOrderDetails.this, "Order updated successfully", Toast.LENGTH_LONG).show();
+       // clearControls();
     }
 
     @Override
@@ -74,10 +75,12 @@ public class CustomerOrderDetails extends AppCompatActivity {
         itemName = (TextView) findViewById(R.id.ckDisplay);
         quantity = (TextView) findViewById(R.id.qtyDisplay);
         price = (TextView) findViewById(R.id.prDisplay);
+        LoadingDialog loadingDialog = new LoadingDialog(CustomerOrderDetails.this);
 
         btnAdd = (Button)findViewById(R.id.btnAddOrder);
         btnUpdate = (Button)findViewById(R.id.btnUpdateOrder);
         btnDelete = (Button)findViewById(R.id.btnDeleteOrder);
+        AlertDialog.Builder builder = new AlertDialog.Builder(phoneNumber.getContext());
 
 
         String oitemName = getIntent().getStringExtra("itemName");
@@ -136,29 +139,52 @@ public class CustomerOrderDetails extends AppCompatActivity {
                 orderDetails.setMessage(message.getText().toString().trim());
                 String msg = orderDetails.getMessage();
 
-
                 dbref.push().getKey();
                 OrderDetails orderDetails = new OrderDetails(iname, iqty, iprice, cusname, phNo, add, ddate, pay, msg);
                 dbref.child(String.valueOf(phNo)).setValue(orderDetails);
-                Toast.makeText(CustomerOrderDetails.this, "Order is submitted successfully", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CustomerOrderDetails.this, "Order is submitted successfully", Toast.LENGTH_SHORT).show();
+
+                //loading animation
+                loadingDialog.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadingDialog.dismissDialog();
+                        Toast.makeText(CustomerOrderDetails.this, "Order submitted Successfully.", Toast.LENGTH_LONG).show();
+
+                    }
+                },3000);
+                //end loading animation
+
+
             }
-            clearControls();
+           // clearControls();
 
         });
 
+        /*btnDelete.setOnClickListener(view ->{
+            orderDetails.setPhoneNumber(phoneNumber.getText().toString().trim());
+            String phNo=orderDetails.getPhoneNumber();
+            deleteOrder(phNo);
+        });*/
+
         btnDelete.setOnClickListener(view ->{
-            AlertDialog.Builder builder = new AlertDialog.Builder(phoneNumber.getContext());
+
             builder.setTitle("Are you sure?");
             builder.setMessage("Deleted data cannot be recovered!");
-            orderDetails.setPhoneNumber(phoneNumber.getText().toString().trim());
+
 
             builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
-                    String phNo = orderDetails.getPhoneNumber();
-                    deleteOrder(phNo);
-                }
+                   //dbref =  FirebaseDatabase.getInstance().getReference().child("OrderDetails").getKey().removeValue();
+
+                   orderDetails.setPhoneNumber(phoneNumber.getText().toString().trim());
+                   String phNo = orderDetails.getPhoneNumber();
+                   deleteOrder(phNo);
+                   }
                 });
 
             builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -168,45 +194,67 @@ public class CustomerOrderDetails extends AppCompatActivity {
                 }
             });
             builder.show();
-
         });
+
 
         btnUpdate.setOnClickListener(view ->{
+            if(TextUtils.isEmpty(cname.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter recipient's name", Toast.LENGTH_SHORT).show();
+            else if(TextUtils.isEmpty(phoneNumber.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter the phone number", Toast.LENGTH_SHORT).show();
 
-            orderDetails.setPhoneNumber(phoneNumber.getText().toString().trim());
-            String phNo = orderDetails.getPhoneNumber();
+            else if(TextUtils.isEmpty(address.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter the delivery address", Toast.LENGTH_SHORT).show();
 
-            String cusname = (cname.getText().toString().trim());
-            orderDetails.setCname(cusname);
+            else if(TextUtils.isEmpty(date.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter the delivery date", Toast.LENGTH_SHORT).show();
 
-            String iname = (itemName.getText().toString().trim());
-            orderDetails.setItemName(iname);
+            else if(TextUtils.isEmpty(payment.getText().toString()))
+                Toast.makeText(getApplicationContext(), "Please enter the payment method", Toast.LENGTH_SHORT).show();
+            else {
 
-            String iqty = (quantity.getText().toString().trim());
-            orderDetails.setQuantity(iqty);
+                orderDetails.setPhoneNumber(phoneNumber.getText().toString().trim());
+                String phNo = orderDetails.getPhoneNumber();
 
-            String iprice = (price.getText().toString().trim());
-            orderDetails.setPrice(iprice);
+                String cusname = (cname.getText().toString().trim());
+                orderDetails.setCname(cusname);
 
-            String add = (address.getText().toString().trim());
-            orderDetails.setAddress(add);
+                String iname = (itemName.getText().toString().trim());
+                orderDetails.setItemName(iname);
 
-            String ddate = (date.getText().toString().trim());
-            orderDetails.setDate(ddate);
+                String iqty = (quantity.getText().toString().trim());
+                orderDetails.setQuantity(iqty);
 
-            String pay = (payment.getText().toString().trim());
-            orderDetails.setPayment(pay);
+                String iprice = (price.getText().toString().trim());
+                orderDetails.setPrice(iprice);
 
-            String msg = (message.getText().toString().trim());
-            orderDetails.setMessage(msg);
+                String add = (address.getText().toString().trim());
+                orderDetails.setAddress(add);
 
-            updateOrder(iname, iqty, iprice, cusname, phNo, add, ddate, pay, msg);
+                String ddate = (date.getText().toString().trim());
+                orderDetails.setDate(ddate);
+
+                String pay = (payment.getText().toString().trim());
+                orderDetails.setPayment(pay);
+
+                String msg = (message.getText().toString().trim());
+                orderDetails.setMessage(msg);
+
+                updateOrder(iname, iqty, iprice, cusname, phNo, add, ddate, pay, msg);
+
+                //loading animation
+                loadingDialog.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadingDialog.dismissDialog();
+                        Toast.makeText(CustomerOrderDetails.this, "Order updated Successfully.", Toast.LENGTH_LONG).show();
+
+                    }
+                },3000);
+                //end loading animation
+            }
         });
-
-
-
-
     }
-
-
 }

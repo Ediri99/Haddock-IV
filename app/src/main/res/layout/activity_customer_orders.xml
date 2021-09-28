@@ -44,7 +44,7 @@
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
-            <EditText
+            <TextView
                 android:id="@+id/etItemNameInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,10 +53,12 @@
                 android:layout_marginTop="1dp"
                 android:layout_marginRight="20dp"
                 android:hint="Item Name"
+                android:textSize="18dp"
                 android:minHeight="48dp"
-                android:textColorHint="#7E7A7A" />
+                android:textColor="@color/black"
+                />
 
-            <EditText
+            <TextView
                 android:id="@+id/etPriceInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,8 +67,10 @@
                 android:layout_marginTop="1dp"
                 android:layout_marginRight="20dp"
                 android:hint="Price"
+                android:textSize="18dp"
                 android:minHeight="48dp"
-                android:textColorHint="#7E7A7A" />
+                android:textColor="@color/black"
+                />
 
             <EditText
                 android:id="@+id/etQuantityInput"
@@ -80,18 +84,21 @@
                 android:minHeight="48dp"
                 android:textColorHint="#7E7A7A" />
 
-            <EditText
+            <TextView
                 android:id="@+id/etTotalAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/etCakeName"
+                android:layout_below="@+id/etQuantityInput"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="1dp"
                 android:layout_marginRight="20dp"
-                android:hint="Total Amount"
+                android:text=""
+                android:textSize="18dp"
                 android:inputType="phone"
                 android:minHeight="48dp"
-                android:textColorHint="#7E7A7A" />
+                android:textColor="@color/black"
+
+                />
 
             <Button
                 android:id="@+id/btnCalTot"
@@ -101,7 +108,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/blueish"
-                android:text="Calculate Total"
+                android:text="Total"
                 app:backgroundTint="#570722" />
 
             <Button

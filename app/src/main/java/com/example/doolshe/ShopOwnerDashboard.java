@@ -15,6 +15,7 @@ public class ShopOwnerDashboard extends AppCompatActivity {
     Button myShop;
     Button myOrders;
     Button myAccount;
+    Button reviews;
 
 
     @Override
@@ -51,6 +52,16 @@ public class ShopOwnerDashboard extends AppCompatActivity {
             public void onClick(View view) {
                 Intent shopOwnerLogin = new Intent(ShopOwnerDashboard.this, ShopOwnerProfile.class);
                 startActivity(shopOwnerLogin);
+            }
+        });
+
+        reviews = (Button) findViewById(R.id.btnReviews);
+        reviews.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addReview = new Intent(ShopOwnerDashboard.this, AllReviews.class);
+                startActivity(addReview);
+                /*finish();*/
             }
         });
     }
