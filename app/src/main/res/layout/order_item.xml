@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobNorv"
+            android:textStyle="bold"
+            android:text="Mobile Number"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cusNamerv"
+            android:text="Customer Name"
+            android:layout_below="@+id/mobNorv"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cakenamerv"
+            android:text="Cake name"
+            android:layout_below="@+id/cusNamerv"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp" />
+
+
+        <TextView
+            android:id="@+id/totPricerv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cakenamerv"
+            android:layout_marginLeft="10dp"
+            android:text="Price"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/totQtyRv"
+            android:text="Quantity (kg)"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_below="@+id/totPricerv"
+            android:layout_marginLeft="10dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

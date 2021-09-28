@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg10"
+    tools:context=".ShopOwnerRegistration">
+
+
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="650dp"
+        android:background="@color/lightgray"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436"
+        app:layout_goneMarginLeft="50dp"
+        app:layout_goneMarginRight="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center|center_vertical"
+                android:text="Order Details"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/orderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt"
+                    android:gravity="center_horizontal"
+                    android:text="Order: "
+                    android:textColor="#040000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ckDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:layout_toRightOf="@+id/orderName"
+                    android:gravity="center_horizontal"
+                    android:text="Item Name"
+                    android:textColor="#040000"
+                    android:textSize="20dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/qtyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt"
+                    android:gravity="center_horizontal"
+                    android:text="Quantity:"
+                    android:textColor="#040000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/qtyDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ckDisplay"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center_horizontal"
+                    android:text="Quantity"
+                    android:textColor="#020000"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/priceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt"
+
+                    android:gravity="center_horizontal"
+                    android:text="Price:"
+                    android:textColor="#040000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/prDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/qtyDisplay"
+                    android:layout_marginLeft="47dp"
+                    android:gravity="center_horizontal"
+                    android:text="Price"
+                    android:textColor="#040000"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+
+            <TextView
+                android:id="@+id/txtCName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prDisplay"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Name:"
+                android:textColor="#040000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/customerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCName"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter your Name"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/txtCPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:text="Phone number: "
+                android:textColor="#020000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/customerPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCPhone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter your phone number"
+                android:inputType="phone"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/txtDeliveryAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:text="Delivery Address: "
+                android:textColor="#020000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/customerDeliveryAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerPhoneNumber"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter delivery Address"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/txtDeliveryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:text="Delivery Date:"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cusDeliveryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerDeliveryAddress"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter delivery date"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/txtPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:text="Payment Method: "
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/paymentM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerDeliveryAddress"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter Payement Method"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/textSellerMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/customerDeliveryAddress"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:text="Message to Seller (optional):"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/messageToSO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textSellerMessage"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter a message to seller (optional)"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/btnAddOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blueish"
+                android:text="Submit"
+                app:backgroundTint="#570722" />
+
+            <Button
+                android:id="@+id/btnUpdateOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/blueish"
+                android:text="Update"
+                app:backgroundTint="#570722" />
+
+            <Button
+                android:id="@+id/btnDeleteOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/blueish"
+                android:text="Delete"
+                app:backgroundTint="#570722" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
